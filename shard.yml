@@ -6,9 +6,4 @@ authors:
 
 crystal: '>= 1.17.1'
 
-dependencies:
-  win32cr:
-    github: mjblack/win32cr
-    version: 1.2.1
-
 license: MIT
