@@ -76,11 +76,4 @@ AutoClick.mouse_move(300, 300)
 AutoClick.right_click
 sleep(1)
 
-# Method 3: Using instance
-puts "Using AutoClick instance..."
-ac = AutoClick::Instance.new
-ac.mouse_move(400, 400)
-ac.double_click
-sleep(1)
-
 puts "Example completed!"
