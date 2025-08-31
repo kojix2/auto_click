@@ -118,8 +118,7 @@
 <li><strong>Keyboard Operations</strong>: Key presses, text typing with special character support</li>
 <li><strong>System Information</strong>: Screen resolution, cursor position, key states</li>
 <li><strong>Windows API Integration</strong>: Direct calls to User32.dll functions</li>
-<li><strong>Flexible Key Mapping</strong>: Support for multiple key naming conventions</li>
-<li><strong>Type Safety</strong>: Crystal's compile-time type checking ensures reliability</li>
+<li><strong>Key Mapping</strong>: Support for multiple key naming conventions</li>
 </ul>
 <h2><a id="installation" class="anchor" href="#installation">
   <svg class="octicon-link" aria-hidden="true">
@@ -173,17 +172,6 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
 <span class="t">AutoClick</span>.left_click()
 <span class="t">AutoClick</span>.mouse_move(<span class="n">100</span>, <span class="n">100</span>)
 <span class="t">AutoClick</span>.<span class="k">type</span>(<span class="s">&quot;Hello World!&quot;</span>)</code></pre>
-<h3><a id="method-3-use-instance" class="anchor" href="#method-3-use-instance">
-  <svg class="octicon-link" aria-hidden="true">
-    <use href="#octicon-link"/>
-  </svg>
-</a>Method 3: Use instance</h3>
-<pre><code class="language-crystal"><span class="k">require</span> <span class="s">&quot;auto_click&quot;</span>
-
-ac <span class="o">=</span> <span class="t">AutoClick</span><span class="t">::</span><span class="t">Instance</span>.new
-ac.left_click()
-ac.mouse_move(<span class="n">100</span>, <span class="n">100</span>)
-ac.<span class="k">type</span>(<span class="s">&quot;Hello World!&quot;</span>)</code></pre>
 <h2><a id="api-reference" class="anchor" href="#api-reference">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
