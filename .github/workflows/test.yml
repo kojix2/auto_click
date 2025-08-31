@@ -1,0 +1,50 @@
+name: test
+
+on:
+  push:
+    branches: ["*"]
+    tags: ["v*"]
+  pull_request:
+
+jobs:
+  test-msvc:
+    name: test (Windows MSVC)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Install Crystal
+        uses: crystal-lang/install-crystal@v1
+        with:
+          crystal: latest
+
+      - name: Install dependencies
+        run: shards install --without-development
+
+      - name: Run tests
+        run: crystal spec
+
+  test-mingw:
+    name: test (Windows MinGW)
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Install Crystal (MinGW64)
+        uses: msys2/setup-msys2@v2
+        with:
+          msystem: MINGW64
+          update: true
+          install: >-
+            mingw-w64-x86_64-crystal
+            mingw-w64-x86_64-shards
+
+      - name: Install dependencies
+        shell: msys2 {0}
+        run: shards install --without-development
+
+      - name: Run tests
+        shell: msys2 {0}
+        run: crystal spec
