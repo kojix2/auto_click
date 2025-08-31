@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="auto_click">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="auto_click">
+  <title>AutoClick::VirtualKey - auto_click main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          auto_click
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="auto_click/AutoClick" data-name="autoclick">
+      <a href="../AutoClick.html">AutoClick</a>
+      
+        <ul>
+  
+  <li class=" " data-id="auto_click/AutoClick/InputStructure" data-name="autoclick::inputstructure">
+      <a href="../AutoClick/InputStructure.html">InputStructure</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Keyboard" data-name="autoclick::keyboard">
+      <a href="../AutoClick/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Mouse" data-name="autoclick::mouse">
+      <a href="../AutoClick/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/User32" data-name="autoclick::user32">
+      <a href="../AutoClick/User32.html">User32</a>
+      
+    </li>
+  
+  <li class=" current" data-id="auto_click/AutoClick/VirtualKey" data-name="autoclick::virtualkey">
+      <a href="../AutoClick/VirtualKey.html">VirtualKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> AutoClick::<wbr>VirtualKey
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Virtual Key Code mappings for AutoClick</p>
+<p>This module provides mapping between key names and Windows Virtual Key Codes
+supporting multiple naming conventions for flexibility.</p>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick/VirtualKey.html">AutoClick::VirtualKey</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/virtual_key.cr#L5" target="_blank">
+        auto_click/virtual_key.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="KEY_MAP">
+        <strong>KEY_MAP</strong> = <code>{<span class="s">&quot;a&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_A</span>, <span class="s">&quot;b&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_B</span>, <span class="s">&quot;c&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_C</span>, <span class="s">&quot;d&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_D</span>, <span class="s">&quot;e&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_E</span>, <span class="s">&quot;f&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F</span>, <span class="s">&quot;g&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_G</span>, <span class="s">&quot;h&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_H</span>, <span class="s">&quot;i&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_I</span>, <span class="s">&quot;j&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_J</span>, <span class="s">&quot;k&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_K</span>, <span class="s">&quot;l&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_L</span>, <span class="s">&quot;m&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_M</span>, <span class="s">&quot;n&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_N</span>, <span class="s">&quot;o&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_O</span>, <span class="s">&quot;p&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_P</span>, <span class="s">&quot;q&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_Q</span>, <span class="s">&quot;r&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_R</span>, <span class="s">&quot;s&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_S</span>, <span class="s">&quot;t&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_T</span>, <span class="s">&quot;u&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_U</span>, <span class="s">&quot;v&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_V</span>, <span class="s">&quot;w&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_W</span>, <span class="s">&quot;x&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_X</span>, <span class="s">&quot;y&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_Y</span>, <span class="s">&quot;z&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_Z</span>, <span class="s">&quot;0&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_0</span>, <span class="s">&quot;1&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_1</span>, <span class="s">&quot;2&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_2</span>, <span class="s">&quot;3&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_3</span>, <span class="s">&quot;4&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_4</span>, <span class="s">&quot;5&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_5</span>, <span class="s">&quot;6&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_6</span>, <span class="s">&quot;7&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_7</span>, <span class="s">&quot;8&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_8</span>, <span class="s">&quot;9&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_9</span>, <span class="s">&quot;f1&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F1</span>, <span class="s">&quot;f2&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F2</span>, <span class="s">&quot;f3&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F3</span>, <span class="s">&quot;f4&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F4</span>, <span class="s">&quot;f5&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F5</span>, <span class="s">&quot;f6&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F6</span>, <span class="s">&quot;f7&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F7</span>, <span class="s">&quot;f8&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F8</span>, <span class="s">&quot;f9&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F9</span>, <span class="s">&quot;f10&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F10</span>, <span class="s">&quot;f11&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F11</span>, <span class="s">&quot;f12&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_F12</span>, <span class="s">&quot;shift&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_SHIFT</span>, <span class="s">&quot;leftshift&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LSHIFT</span>, <span class="s">&quot;rightshift&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_RSHIFT</span>, <span class="s">&quot;ctrl&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_CONTROL</span>, <span class="s">&quot;control&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_CONTROL</span>, <span class="s">&quot;leftctrl&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LCONTROL</span>, <span class="s">&quot;rightctrl&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_RCONTROL</span>, <span class="s">&quot;alt&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_MENU</span>, <span class="s">&quot;leftalt&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LMENU</span>, <span class="s">&quot;rightalt&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_RMENU</span>, <span class="s">&quot;win&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LWIN</span>, <span class="s">&quot;windows&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LWIN</span>, <span class="s">&quot;leftwin&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LWIN</span>, <span class="s">&quot;rightwin&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_RWIN</span>, <span class="s">&quot;space&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_SPACE</span>, <span class="s">&quot;enter&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_RETURN</span>, <span class="s">&quot;tab&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_TAB</span>, <span class="s">&quot;esc&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_ESCAPE</span>, <span class="s">&quot;escape&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_ESCAPE</span>, <span class="s">&quot;backspace&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_BACK</span>, <span class="s">&quot;delete&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_DELETE</span>, <span class="s">&quot;insert&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_INSERT</span>, <span class="s">&quot;home&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_HOME</span>, <span class="s">&quot;end&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_END</span>, <span class="s">&quot;pageup&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_PRIOR</span>, <span class="s">&quot;pagedown&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_NEXT</span>, <span class="s">&quot;capslock&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_CAPITAL</span>, <span class="s">&quot;numlock&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_NUMLOCK</span>, <span class="s">&quot;pause&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_PAUSE</span>, <span class="s">&quot;printscreen&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_SNAPSHOT</span>, <span class="s">&quot;left&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_LEFT</span>, <span class="s">&quot;right&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_RIGHT</span>, <span class="s">&quot;up&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_UP</span>, <span class="s">&quot;down&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_DOWN</span>, <span class="s">&quot;semicolon&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_1</span>, <span class="s">&quot;equal&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_PLUS</span>, <span class="s">&quot;comma&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_COMMA</span>, <span class="s">&quot;hyphen&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_MINUS</span>, <span class="s">&quot;period&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_PERIOD</span>, <span class="s">&quot;slash&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_2</span>, <span class="s">&quot;grave&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_3</span>, <span class="s">&quot;bracket&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_4</span>, <span class="s">&quot;backslash&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_5</span>, <span class="s">&quot;closebracket&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_6</span>, <span class="s">&quot;quote&quot;</span> <span class="o">=&gt;</span> <span class="t">VK_OEM_7</span>}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Key name to virtual key code mapping</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="SPECIAL_CHAR_MAP">
+        <strong>SPECIAL_CHAR_MAP</strong> = <code>{<span class="s">&#39;!&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;1&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;@&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;2&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;#&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;3&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;$&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;4&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;%&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;5&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;^&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;6&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;&amp;&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;7&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;*&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;8&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;(&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;9&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;)&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;0&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;_&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;-&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;+&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;=&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;{&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;[&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;}&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;]&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;|&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;\\&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;:&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;;&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;&quot;&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;&#39;&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;&lt;&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;,&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;&gt;&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;.&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;?&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;/&quot;</span>, <span class="n">true</span>}, <span class="s">&#39;~&#39;</span> <span class="o">=&gt;</span> {<span class="s">&quot;`&quot;</span>, <span class="n">true</span>}}</code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Special character to key combination mapping</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_0">
+        <strong>VK_0</strong> = <code><span class="n">48</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Number keys (main keyboard)</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_1">
+        <strong>VK_1</strong> = <code><span class="n">49</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_2">
+        <strong>VK_2</strong> = <code><span class="n">50</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_3">
+        <strong>VK_3</strong> = <code><span class="n">51</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_4">
+        <strong>VK_4</strong> = <code><span class="n">52</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_5">
+        <strong>VK_5</strong> = <code><span class="n">53</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_6">
+        <strong>VK_6</strong> = <code><span class="n">54</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_7">
+        <strong>VK_7</strong> = <code><span class="n">55</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_8">
+        <strong>VK_8</strong> = <code><span class="n">56</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_9">
+        <strong>VK_9</strong> = <code><span class="n">57</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_A">
+        <strong>VK_A</strong> = <code><span class="n">65</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Letter keys</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_ADD">
+        <strong>VK_ADD</strong> = <code><span class="n">107</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_APPS">
+        <strong>VK_APPS</strong> = <code><span class="n">93</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_B">
+        <strong>VK_B</strong> = <code><span class="n">66</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_BACK">
+        <strong>VK_BACK</strong> = <code><span class="n">8</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_C">
+        <strong>VK_C</strong> = <code><span class="n">67</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_CANCEL">
+        <strong>VK_CANCEL</strong> = <code><span class="n">3</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_CAPITAL">
+        <strong>VK_CAPITAL</strong> = <code><span class="n">20</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_CLEAR">
+        <strong>VK_CLEAR</strong> = <code><span class="n">12</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_CONTROL">
+        <strong>VK_CONTROL</strong> = <code><span class="n">17</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_D">
+        <strong>VK_D</strong> = <code><span class="n">68</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_DECIMAL">
+        <strong>VK_DECIMAL</strong> = <code><span class="n">110</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_DELETE">
+        <strong>VK_DELETE</strong> = <code><span class="n">46</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_DIVIDE">
+        <strong>VK_DIVIDE</strong> = <code><span class="n">111</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_DOWN">
+        <strong>VK_DOWN</strong> = <code><span class="n">40</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_E">
+        <strong>VK_E</strong> = <code><span class="n">69</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_END">
+        <strong>VK_END</strong> = <code><span class="n">35</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_ESCAPE">
+        <strong>VK_ESCAPE</strong> = <code><span class="n">27</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_EXECUTE">
+        <strong>VK_EXECUTE</strong> = <code><span class="n">43</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F">
+        <strong>VK_F</strong> = <code><span class="n">70</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F1">
+        <strong>VK_F1</strong> = <code><span class="n">112</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Function keys</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_F10">
+        <strong>VK_F10</strong> = <code><span class="n">121</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F11">
+        <strong>VK_F11</strong> = <code><span class="n">122</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F12">
+        <strong>VK_F12</strong> = <code><span class="n">123</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F13">
+        <strong>VK_F13</strong> = <code><span class="n">124</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F14">
+        <strong>VK_F14</strong> = <code><span class="n">125</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F15">
+        <strong>VK_F15</strong> = <code><span class="n">126</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F16">
+        <strong>VK_F16</strong> = <code><span class="n">127</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F17">
+        <strong>VK_F17</strong> = <code><span class="n">128</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F18">
+        <strong>VK_F18</strong> = <code><span class="n">129</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F19">
+        <strong>VK_F19</strong> = <code><span class="n">130</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F2">
+        <strong>VK_F2</strong> = <code><span class="n">113</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F20">
+        <strong>VK_F20</strong> = <code><span class="n">131</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F21">
+        <strong>VK_F21</strong> = <code><span class="n">132</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F22">
+        <strong>VK_F22</strong> = <code><span class="n">133</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F23">
+        <strong>VK_F23</strong> = <code><span class="n">134</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F24">
+        <strong>VK_F24</strong> = <code><span class="n">135</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F3">
+        <strong>VK_F3</strong> = <code><span class="n">114</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F4">
+        <strong>VK_F4</strong> = <code><span class="n">115</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F5">
+        <strong>VK_F5</strong> = <code><span class="n">116</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F6">
+        <strong>VK_F6</strong> = <code><span class="n">117</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F7">
+        <strong>VK_F7</strong> = <code><span class="n">118</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F8">
+        <strong>VK_F8</strong> = <code><span class="n">119</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_F9">
+        <strong>VK_F9</strong> = <code><span class="n">120</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_G">
+        <strong>VK_G</strong> = <code><span class="n">71</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_H">
+        <strong>VK_H</strong> = <code><span class="n">72</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_HELP">
+        <strong>VK_HELP</strong> = <code><span class="n">47</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_HOME">
+        <strong>VK_HOME</strong> = <code><span class="n">36</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_I">
+        <strong>VK_I</strong> = <code><span class="n">73</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_INSERT">
+        <strong>VK_INSERT</strong> = <code><span class="n">45</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_J">
+        <strong>VK_J</strong> = <code><span class="n">74</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_K">
+        <strong>VK_K</strong> = <code><span class="n">75</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_L">
+        <strong>VK_L</strong> = <code><span class="n">76</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_LBUTTON">
+        <strong>VK_LBUTTON</strong> = <code><span class="n">1</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Virtual Key Code constants</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_LCONTROL">
+        <strong>VK_LCONTROL</strong> = <code><span class="n">162</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_LEFT">
+        <strong>VK_LEFT</strong> = <code><span class="n">37</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_LMENU">
+        <strong>VK_LMENU</strong> = <code><span class="n">164</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_LSHIFT">
+        <strong>VK_LSHIFT</strong> = <code><span class="n">160</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Modifier keys (left/right specific)</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_LWIN">
+        <strong>VK_LWIN</strong> = <code><span class="n">91</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Windows keys</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_M">
+        <strong>VK_M</strong> = <code><span class="n">77</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_MBUTTON">
+        <strong>VK_MBUTTON</strong> = <code><span class="n">4</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_MENU">
+        <strong>VK_MENU</strong> = <code><span class="n">18</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_MULTIPLY">
+        <strong>VK_MULTIPLY</strong> = <code><span class="n">106</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_N">
+        <strong>VK_N</strong> = <code><span class="n">78</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NEXT">
+        <strong>VK_NEXT</strong> = <code><span class="n">34</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMLOCK">
+        <strong>VK_NUMLOCK</strong> = <code><span class="n">144</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Lock keys</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD0">
+        <strong>VK_NUMPAD0</strong> = <code><span class="n">96</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Numpad keys</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD1">
+        <strong>VK_NUMPAD1</strong> = <code><span class="n">97</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD2">
+        <strong>VK_NUMPAD2</strong> = <code><span class="n">98</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD3">
+        <strong>VK_NUMPAD3</strong> = <code><span class="n">99</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD4">
+        <strong>VK_NUMPAD4</strong> = <code><span class="n">100</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD5">
+        <strong>VK_NUMPAD5</strong> = <code><span class="n">101</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD6">
+        <strong>VK_NUMPAD6</strong> = <code><span class="n">102</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD7">
+        <strong>VK_NUMPAD7</strong> = <code><span class="n">103</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD8">
+        <strong>VK_NUMPAD8</strong> = <code><span class="n">104</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_NUMPAD9">
+        <strong>VK_NUMPAD9</strong> = <code><span class="n">105</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_O">
+        <strong>VK_O</strong> = <code><span class="n">79</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_1">
+        <strong>VK_OEM_1</strong> = <code><span class="n">186</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Symbol keys</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="VK_OEM_2">
+        <strong>VK_OEM_2</strong> = <code><span class="n">191</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_3">
+        <strong>VK_OEM_3</strong> = <code><span class="n">192</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_4">
+        <strong>VK_OEM_4</strong> = <code><span class="n">219</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_5">
+        <strong>VK_OEM_5</strong> = <code><span class="n">220</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_6">
+        <strong>VK_OEM_6</strong> = <code><span class="n">221</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_7">
+        <strong>VK_OEM_7</strong> = <code><span class="n">222</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_COMMA">
+        <strong>VK_OEM_COMMA</strong> = <code><span class="n">188</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_MINUS">
+        <strong>VK_OEM_MINUS</strong> = <code><span class="n">189</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_PERIOD">
+        <strong>VK_OEM_PERIOD</strong> = <code><span class="n">190</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_OEM_PLUS">
+        <strong>VK_OEM_PLUS</strong> = <code><span class="n">187</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_P">
+        <strong>VK_P</strong> = <code><span class="n">80</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_PAUSE">
+        <strong>VK_PAUSE</strong> = <code><span class="n">19</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_PRINT">
+        <strong>VK_PRINT</strong> = <code><span class="n">42</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_PRIOR">
+        <strong>VK_PRIOR</strong> = <code><span class="n">33</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_Q">
+        <strong>VK_Q</strong> = <code><span class="n">81</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_R">
+        <strong>VK_R</strong> = <code><span class="n">82</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RBUTTON">
+        <strong>VK_RBUTTON</strong> = <code><span class="n">2</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RCONTROL">
+        <strong>VK_RCONTROL</strong> = <code><span class="n">163</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RETURN">
+        <strong>VK_RETURN</strong> = <code><span class="n">13</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RIGHT">
+        <strong>VK_RIGHT</strong> = <code><span class="n">39</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RMENU">
+        <strong>VK_RMENU</strong> = <code><span class="n">165</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RSHIFT">
+        <strong>VK_RSHIFT</strong> = <code><span class="n">161</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_RWIN">
+        <strong>VK_RWIN</strong> = <code><span class="n">92</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_S">
+        <strong>VK_S</strong> = <code><span class="n">83</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SCROLL">
+        <strong>VK_SCROLL</strong> = <code><span class="n">145</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SELECT">
+        <strong>VK_SELECT</strong> = <code><span class="n">41</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SEPARATOR">
+        <strong>VK_SEPARATOR</strong> = <code><span class="n">108</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SHIFT">
+        <strong>VK_SHIFT</strong> = <code><span class="n">16</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SNAPSHOT">
+        <strong>VK_SNAPSHOT</strong> = <code><span class="n">44</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SPACE">
+        <strong>VK_SPACE</strong> = <code><span class="n">32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_SUBTRACT">
+        <strong>VK_SUBTRACT</strong> = <code><span class="n">109</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_T">
+        <strong>VK_T</strong> = <code><span class="n">84</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_TAB">
+        <strong>VK_TAB</strong> = <code><span class="n">9</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_U">
+        <strong>VK_U</strong> = <code><span class="n">85</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_UP">
+        <strong>VK_UP</strong> = <code><span class="n">38</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_V">
+        <strong>VK_V</strong> = <code><span class="n">86</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_W">
+        <strong>VK_W</strong> = <code><span class="n">87</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_X">
+        <strong>VK_X</strong> = <code><span class="n">88</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_XBUTTON1">
+        <strong>VK_XBUTTON1</strong> = <code><span class="n">5</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_XBUTTON2">
+        <strong>VK_XBUTTON2</strong> = <code><span class="n">6</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_Y">
+        <strong>VK_Y</strong> = <code><span class="n">89</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="VK_Z">
+        <strong>VK_Z</strong> = <code><span class="n">90</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#get_key_combination%28char%3AChar%29%3ATuple%28Int32%2CBool%29-instance-method" class="signature"><strong>#get_key_combination</strong>(char : Char) : Tuple(Int32, Bool)</a>
+        
+          <div class="summary"><p>Get key combination for a character</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_vk_code%28key%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : Int32) : Int32</a>
+        
+          <div class="summary"><p>Convert key name to virtual key code (Int32 overload)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_vk_code%28key%3ASymbol%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : Symbol) : Int32</a>
+        
+          <div class="summary"><p>Convert key name to virtual key code (Symbol overload)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_vk_code%28key%3AString%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : String) : Int32</a>
+        
+          <div class="summary"><p>Convert key name to virtual key code (String overload)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#requires_shift%3F%28char%3AChar%29%3ABool-instance-method" class="signature"><strong>#requires_shift?</strong>(char : Char) : Bool</a>
+        
+          <div class="summary"><p>Check if a character requires Shift key</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="get_key_combination(char:Char):Tuple(Int32,Bool)-instance-method">
+      <div class="signature">
+        
+        def <strong>get_key_combination</strong>(char : Char) : Tuple(Int32, Bool)
+
+        <a class="method-permalink" href="#get_key_combination%28char%3AChar%29%3ATuple%28Int32%2CBool%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get key combination for a character</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/virtual_key.cr#L266" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_vk_code(key:Int32):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>get_vk_code</strong>(key : Int32) : Int32
+
+        <a class="method-permalink" href="#get_vk_code%28key%3AInt32%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert key name to virtual key code (Int32 overload)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/virtual_key.cr#L224" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_vk_code(key:Symbol):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>get_vk_code</strong>(key : Symbol) : Int32
+
+        <a class="method-permalink" href="#get_vk_code%28key%3ASymbol%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert key name to virtual key code (Symbol overload)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/virtual_key.cr#L229" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_vk_code(key:String):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>get_vk_code</strong>(key : String) : Int32
+
+        <a class="method-permalink" href="#get_vk_code%28key%3AString%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Convert key name to virtual key code (String overload)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/virtual_key.cr#L234" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="requires_shift?(char:Char):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>requires_shift?</strong>(char : Char) : Bool
+
+        <a class="method-permalink" href="#requires_shift%3F%28char%3AChar%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Check if a character requires Shift key</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/virtual_key.cr#L261" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

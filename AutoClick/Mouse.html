@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="auto_click">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="auto_click">
+  <title>AutoClick::Mouse - auto_click main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          auto_click
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="auto_click/AutoClick" data-name="autoclick">
+      <a href="../AutoClick.html">AutoClick</a>
+      
+        <ul>
+  
+  <li class=" " data-id="auto_click/AutoClick/InputStructure" data-name="autoclick::inputstructure">
+      <a href="../AutoClick/InputStructure.html">InputStructure</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Keyboard" data-name="autoclick::keyboard">
+      <a href="../AutoClick/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" current" data-id="auto_click/AutoClick/Mouse" data-name="autoclick::mouse">
+      <a href="../AutoClick/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/User32" data-name="autoclick::user32">
+      <a href="../AutoClick/User32.html">User32</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/VirtualKey" data-name="autoclick::virtualkey">
+      <a href="../AutoClick/VirtualKey.html">VirtualKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> AutoClick::<wbr>Mouse
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Mouse operations for AutoClick</p>
+<p>This module provides all mouse-related functionality including
+clicking, dragging, scrolling, and cursor movement.</p>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick/Mouse.html">AutoClick::Mouse</a></li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="direct-including-types" class="anchor" href="#direct-including-types">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct including types
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick.html">AutoClick</a></li>
+    
+  </ul>
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L5" target="_blank">
+        auto_click/mouse.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#click_at%28x%3AInt32%2Cy%3AInt32%2Cbutton%3ASymbol%3D%3Aleft%29%3ANil-instance-method" class="signature"><strong>#click_at</strong>(x : Int32, y : Int32, button : Symbol = <span class="n">:left</span>) : Nil</a>
+        
+          <div class="summary"><p>Click at specific coordinates</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#double_click%3ANil-instance-method" class="signature"><strong>#double_click</strong> : Nil</a>
+        
+          <div class="summary"><p>Perform a double click</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#double_click_at%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method" class="signature"><strong>#double_click_at</strong>(x : Int32, y : Int32) : Nil</a>
+        
+          <div class="summary"><p>Double click at specific coordinates</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%2Cbutton%3ASymbol%3D%3Aleft%29%3ANil-instance-method" class="signature"><strong>#drag</strong>(sx : Int32, sy : Int32, ex : Int32, ey : Int32, button : Symbol = <span class="n">:left</span>) : Nil</a>
+        
+          <div class="summary"><p>Drag from one point to another with specified button</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_click%3ANil-instance-method" class="signature"><strong>#left_click</strong> : Nil</a>
+        
+          <div class="summary"><p>Perform a left mouse button click</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%29%3ANil-instance-method" class="signature"><strong>#left_drag</strong>(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil</a>
+        
+          <div class="summary"><p>Perform a left mouse drag operation</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#middle_click%3ANil-instance-method" class="signature"><strong>#middle_click</strong> : Nil</a>
+        
+          <div class="summary"><p>Perform a middle mouse button click</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_button_pressed%3F%28button%3ASymbol%29%3ABool-instance-method" class="signature"><strong>#mouse_button_pressed?</strong>(button : Symbol) : Bool</a>
+        
+          <div class="summary"><p>Check if mouse button is currently pressed</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_down%28button_name%3ASymbol%29%3ANil-instance-method" class="signature"><strong>#mouse_down</strong>(button_name : Symbol) : Nil</a>
+        
+          <div class="summary"><p>Press and hold a mouse button</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_scroll%28steps%3AInt32%29%3ANil-instance-method" class="signature"><strong>#mouse_scroll</strong>(steps : Int32) : Nil</a>
+        
+          <div class="summary"><p>Scroll the mouse wheel</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_up%28button_name%3ASymbol%29%3ANil-instance-method" class="signature"><strong>#mouse_up</strong>(button_name : Symbol) : Nil</a>
+        
+          <div class="summary"><p>Release a mouse button</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_click%3ANil-instance-method" class="signature"><strong>#right_click</strong> : Nil</a>
+        
+          <div class="summary"><p>Perform a right mouse button click</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%29%3ANil-instance-method" class="signature"><strong>#right_drag</strong>(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil</a>
+        
+          <div class="summary"><p>Perform a right mouse drag operation</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scroll_down%28steps%3AInt32%3D1%29%3ANil-instance-method" class="signature"><strong>#scroll_down</strong>(steps : Int32 = <span class="n">1</span>) : Nil</a>
+        
+          <div class="summary"><p>Scroll down by specified steps</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#scroll_up%28steps%3AInt32%3D1%29%3ANil-instance-method" class="signature"><strong>#scroll_up</strong>(steps : Int32 = <span class="n">1</span>) : Nil</a>
+        
+          <div class="summary"><p>Scroll up by specified steps</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#smooth_move%28x%3AInt32%2Cy%3AInt32%2Csteps%3AInt32%3D10%2Cdelay%3AFloat64%3D0.01%29%3ANil-instance-method" class="signature"><strong>#smooth_move</strong>(x : Int32, y : Int32, steps : Int32 = <span class="n">10</span>, delay : Float64 = <span class="n">0.01</span>) : Nil</a>
+        
+          <div class="summary"><p>Move mouse in a smooth motion (with intermediate steps)</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="click_at(x:Int32,y:Int32,button:Symbol=:left):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>click_at</strong>(x : Int32, y : Int32, button : Symbol = <span class="n">:left</span>) : Nil
+
+        <a class="method-permalink" href="#click_at%28x%3AInt32%2Cy%3AInt32%2Cbutton%3ASymbol%3D%3Aleft%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Click at specific coordinates</p>
+<ul>
+<li>x: X coordinate</li>
+<li>y: Y coordinate</li>
+<li>button: Mouse button to click (:left, :right, :middle)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L154" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="double_click:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>double_click</strong> : Nil
+
+        <a class="method-permalink" href="#double_click%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Perform a double click</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L36" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="double_click_at(x:Int32,y:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>double_click_at</strong>(x : Int32, y : Int32) : Nil
+
+        <a class="method-permalink" href="#double_click_at%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Double click at specific coordinates</p>
+<ul>
+<li>x: X coordinate</li>
+<li>y: Y coordinate</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L172" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="drag(sx:Int32,sy:Int32,ex:Int32,ey:Int32,button:Symbol=:left):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>drag</strong>(sx : Int32, sy : Int32, ex : Int32, ey : Int32, button : Symbol = <span class="n">:left</span>) : Nil
+
+        <a class="method-permalink" href="#drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%2Cbutton%3ASymbol%3D%3Aleft%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Drag from one point to another with specified button</p>
+<ul>
+<li>sx: Start X coordinate</li>
+<li>sy: Start Y coordinate</li>
+<li>ex: End X coordinate</li>
+<li>ey: End Y coordinate</li>
+<li>button: Mouse button to use for dragging (:left, :right)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L184" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_click:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>left_click</strong> : Nil
+
+        <a class="method-permalink" href="#left_click%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Perform a left mouse button click</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L9" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_drag(sx:Int32,sy:Int32,ex:Int32,ey:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>left_drag</strong>(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil
+
+        <a class="method-permalink" href="#left_drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Perform a left mouse drag operation</p>
+<ul>
+<li>sx: Start X coordinate</li>
+<li>sy: Start Y coordinate</li>
+<li>ex: End X coordinate</li>
+<li>ey: End Y coordinate</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L83" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="middle_click:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>middle_click</strong> : Nil
+
+        <a class="method-permalink" href="#middle_click%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Perform a middle mouse button click</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_button_pressed?(button:Symbol):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_button_pressed?</strong>(button : Symbol) : Bool
+
+        <a class="method-permalink" href="#mouse_button_pressed%3F%28button%3ASymbol%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Check if mouse button is currently pressed</p>
+<ul>
+<li>button: Mouse button to check (:left, :right, :middle)
+Returns: true if button is pressed, false otherwise</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L225" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_down(button_name:Symbol):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_down</strong>(button_name : Symbol) : Nil
+
+        <a class="method-permalink" href="#mouse_down%28button_name%3ASymbol%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Press and hold a mouse button</p>
+<ul>
+<li>button_name: :left, :right, or :middle</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_scroll(steps:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_scroll</strong>(steps : Int32) : Nil
+
+        <a class="method-permalink" href="#mouse_scroll%28steps%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Scroll the mouse wheel</p>
+<ul>
+<li>steps: Number of scroll steps (positive = up/forward, negative = down/backward)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L128" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_up(button_name:Symbol):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_up</strong>(button_name : Symbol) : Nil
+
+        <a class="method-permalink" href="#mouse_up%28button_name%3ASymbol%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Release a mouse button</p>
+<ul>
+<li>button_name: :left, :right, or :middle</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_click:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>right_click</strong> : Nil
+
+        <a class="method-permalink" href="#right_click%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Perform a right mouse button click</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L18" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_drag(sx:Int32,sy:Int32,ex:Int32,ey:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>right_drag</strong>(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil
+
+        <a class="method-permalink" href="#right_drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Perform a right mouse drag operation</p>
+<ul>
+<li>sx: Start X coordinate</li>
+<li>sy: Start Y coordinate</li>
+<li>ex: End X coordinate</li>
+<li>ey: End Y coordinate</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scroll_down(steps:Int32=1):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>scroll_down</strong>(steps : Int32 = <span class="n">1</span>) : Nil
+
+        <a class="method-permalink" href="#scroll_down%28steps%3AInt32%3D1%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Scroll down by specified steps</p>
+<ul>
+<li>steps: Number of steps to scroll down (default: 1)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L145" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="scroll_up(steps:Int32=1):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>scroll_up</strong>(steps : Int32 = <span class="n">1</span>) : Nil
+
+        <a class="method-permalink" href="#scroll_up%28steps%3AInt32%3D1%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Scroll up by specified steps</p>
+<ul>
+<li>steps: Number of steps to scroll up (default: 1)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="smooth_move(x:Int32,y:Int32,steps:Int32=10,delay:Float64=0.01):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>smooth_move</strong>(x : Int32, y : Int32, steps : Int32 = <span class="n">10</span>, delay : Float64 = <span class="n">0.01</span>) : Nil
+
+        <a class="method-permalink" href="#smooth_move%28x%3AInt32%2Cy%3AInt32%2Csteps%3AInt32%3D10%2Cdelay%3AFloat64%3D0.01%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Move mouse in a smooth motion (with intermediate steps)</p>
+<ul>
+<li>x: Target X coordinate</li>
+<li>y: Target Y coordinate</li>
+<li>steps: Number of intermediate steps (default: 10)</li>
+<li>delay: Delay between steps in seconds (default: 0.01)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/mouse.cr#L201" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

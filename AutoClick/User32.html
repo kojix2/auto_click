@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="auto_click">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="auto_click">
+  <title>AutoClick::User32 - auto_click main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          auto_click
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="auto_click/AutoClick" data-name="autoclick">
+      <a href="../AutoClick.html">AutoClick</a>
+      
+        <ul>
+  
+  <li class=" " data-id="auto_click/AutoClick/InputStructure" data-name="autoclick::inputstructure">
+      <a href="../AutoClick/InputStructure.html">InputStructure</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Keyboard" data-name="autoclick::keyboard">
+      <a href="../AutoClick/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Mouse" data-name="autoclick::mouse">
+      <a href="../AutoClick/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" current" data-id="auto_click/AutoClick/User32" data-name="autoclick::user32">
+      <a href="../AutoClick/User32.html">User32</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/VirtualKey" data-name="autoclick::virtualkey">
+      <a href="../AutoClick/VirtualKey.html">VirtualKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> AutoClick::<wbr>User32
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Windows User32 API bindings for AutoClick</p>
+<p>This module provides Crystal bindings for the Windows User32.dll functions
+needed for mouse and keyboard automation.</p>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick/User32.html">AutoClick::User32</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L5" target="_blank">
+        auto_click/user32.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#get_cursor_pos%28point%3ABytes%29%3AInt32-instance-method" class="signature"><strong>#get_cursor_pos</strong>(point : Bytes) : Int32</a>
+        
+          <div class="summary"><p>Get current cursor position</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_key_state%28virt_key%3AInt32%29%3AInt16-instance-method" class="signature"><strong>#get_key_state</strong>(virt_key : Int32) : Int16</a>
+        
+          <div class="summary"><p>Get the state of a virtual key</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_system_metrics%28index%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#get_system_metrics</strong>(index : Int32) : Int32</a>
+        
+          <div class="summary"><p>Get system metrics</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_input%28inputs%3ABytes%2Ccount%3AUInt32%2Cinput_size%3AInt32%29%3AUInt32-instance-method" class="signature"><strong>#send_input</strong>(inputs : Bytes, count : UInt32, input_size : Int32) : UInt32</a>
+        
+          <div class="summary"><p>Send input events to the system</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_cursor_pos%28x%3AInt32%2Cy%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#set_cursor_pos</strong>(x : Int32, y : Int32) : Int32</a>
+        
+          <div class="summary"><p>Set cursor position</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="get_cursor_pos(point:Bytes):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>get_cursor_pos</strong>(point : Bytes) : Int32
+
+        <a class="method-permalink" href="#get_cursor_pos%28point%3ABytes%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get current cursor position</p>
+<ul>
+<li>point: Byte buffer to store the position (8 bytes for x,y coordinates)
+Returns: 1 on success, 0 on failure</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_key_state(virt_key:Int32):Int16-instance-method">
+      <div class="signature">
+        
+        def <strong>get_key_state</strong>(virt_key : Int32) : Int16
+
+        <a class="method-permalink" href="#get_key_state%28virt_key%3AInt32%29%3AInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the state of a virtual key</p>
+<ul>
+<li>virt_key: Virtual key code
+Returns: Key state (negative if pressed, positive if toggled on)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_system_metrics(index:Int32):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>get_system_metrics</strong>(index : Int32) : Int32
+
+        <a class="method-permalink" href="#get_system_metrics%28index%3AInt32%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get system metrics</p>
+<ul>
+<li>index: System metric index (0=screen width, 1=screen height)
+Returns: The requested system metric value</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_input(inputs:Bytes,count:UInt32,input_size:Int32):UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>send_input</strong>(inputs : Bytes, count : UInt32, input_size : Int32) : UInt32
+
+        <a class="method-permalink" href="#send_input%28inputs%3ABytes%2Ccount%3AUInt32%2Cinput_size%3AInt32%29%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send input events to the system</p>
+<ul>
+<li>inputs: Array of input structures</li>
+<li>input_size: Size of each input structure in bytes
+Returns: Number of events successfully sent</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L49" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_cursor_pos(x:Int32,y:Int32):Int32-instance-method">
+      <div class="signature">
+        
+        def <strong>set_cursor_pos</strong>(x : Int32, y : Int32) : Int32
+
+        <a class="method-permalink" href="#set_cursor_pos%28x%3AInt32%2Cy%3AInt32%29%3AInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Set cursor position</p>
+<ul>
+<li>x: X coordinate in pixels</li>
+<li>y: Y coordinate in pixels
+Returns: 1 on success, 0 on failure</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L40" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

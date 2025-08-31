@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="auto_click">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="auto_click">
+  <title>AutoClick::Keyboard - auto_click main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          auto_click
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="auto_click/AutoClick" data-name="autoclick">
+      <a href="../AutoClick.html">AutoClick</a>
+      
+        <ul>
+  
+  <li class=" " data-id="auto_click/AutoClick/InputStructure" data-name="autoclick::inputstructure">
+      <a href="../AutoClick/InputStructure.html">InputStructure</a>
+      
+    </li>
+  
+  <li class=" current" data-id="auto_click/AutoClick/Keyboard" data-name="autoclick::keyboard">
+      <a href="../AutoClick/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Mouse" data-name="autoclick::mouse">
+      <a href="../AutoClick/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/User32" data-name="autoclick::user32">
+      <a href="../AutoClick/User32.html">User32</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/VirtualKey" data-name="autoclick::virtualkey">
+      <a href="../AutoClick/VirtualKey.html">VirtualKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> AutoClick::<wbr>Keyboard
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Keyboard operations for AutoClick</p>
+<p>This module provides all keyboard-related functionality including
+key presses, text typing, and key state checking.</p>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick/Keyboard.html">AutoClick::Keyboard</a></li>
+    
+  </ul>
+
+
+
+
+
+  <h2>
+    <a id="direct-including-types" class="anchor" href="#direct-including-types">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Direct including types
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick.html">AutoClick</a></li>
+    
+  </ul>
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L5" target="_blank">
+        auto_click/keyboard.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#alt_f4%3ANil-instance-method" class="signature"><strong>#alt_f4</strong> : Nil</a>
+        
+          <div class="summary"><p>Alt+F4 (close window)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#alt_tab%3ANil-instance-method" class="signature"><strong>#alt_tab</strong> : Nil</a>
+        
+          <div class="summary"><p>Alt+Tab (switch windows)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#copy%3ANil-instance-method" class="signature"><strong>#copy</strong> : Nil</a>
+        
+          <div class="summary"><p>Copy (Ctrl+C)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#cut%3ANil-instance-method" class="signature"><strong>#cut</strong> : Nil</a>
+        
+          <div class="summary"><p>Cut (Ctrl+X)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#find%3ANil-instance-method" class="signature"><strong>#find</strong> : Nil</a>
+        
+          <div class="summary"><p>Find (Ctrl+F)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#get_key_state%28key_name%3AString%7CSymbol%7CInt32%29%3AInt16-instance-method" class="signature"><strong>#get_key_state</strong>(key_name : String | Symbol | Int32) : Int16</a>
+        
+          <div class="summary"><p>Get the current state of a key</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#hold_key%28key_name%3AString%7CSymbol%7CInt32%2Cduration%3AFloat64%29%3ANil-instance-method" class="signature"><strong>#hold_key</strong>(key_name : String | Symbol | Int32, duration : Float64) : Nil</a>
+        
+          <div class="summary"><p>Hold a key for a specified duration</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_combination%28keys%3AArray%28String%7CSymbol%7CInt32%29%29%3ANil-instance-method" class="signature"><strong>#key_combination</strong>(keys : Array(String | Symbol | Int32)) : Nil</a>
+        
+          <div class="summary"><p>Send key combination from array</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_combination%28%2Akeys%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="signature"><strong>#key_combination</strong>(*keys : String | Symbol | Int32) : Nil</a>
+        
+          <div class="summary"><p>Send key combination (e.g., Ctrl+C, Alt+Tab)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_down%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="signature"><strong>#key_down</strong>(key_name : String | Symbol | Int32) : Nil</a>
+        
+          <div class="summary"><p>Press and hold a key</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_pressed%3F%28key_name%3AString%7CSymbol%7CInt32%29%3ABool-instance-method" class="signature"><strong>#key_pressed?</strong>(key_name : String | Symbol | Int32) : Bool</a>
+        
+          <div class="summary"><p>Check if a key is currently pressed</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_stroke%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="signature"><strong>#key_stroke</strong>(key_name : String | Symbol | Int32) : Nil</a>
+        
+          <div class="summary"><p>Press and release a key (key stroke)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_toggled%3F%28key_name%3AString%7CSymbol%7CInt32%29%3ABool-instance-method" class="signature"><strong>#key_toggled?</strong>(key_name : String | Symbol | Int32) : Bool</a>
+        
+          <div class="summary"><p>Check if a toggle key is currently on (like Caps Lock, Num Lock)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_up%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="signature"><strong>#key_up</strong>(key_name : String | Symbol | Int32) : Nil</a>
+        
+          <div class="summary"><p>Release a key</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#lock_screen%3ANil-instance-method" class="signature"><strong>#lock_screen</strong> : Nil</a>
+        
+          <div class="summary"><p>Win+L (lock screen)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#new%3ANil-instance-method" class="signature"><strong>#new</strong> : Nil</a>
+        
+          <div class="summary"><p>New (Ctrl+N)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#open%3ANil-instance-method" class="signature"><strong>#open</strong> : Nil</a>
+        
+          <div class="summary"><p>Open (Ctrl+O)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#paste%3ANil-instance-method" class="signature"><strong>#paste</strong> : Nil</a>
+        
+          <div class="summary"><p>Paste (Ctrl+V)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#print_screen%3ANil-instance-method" class="signature"><strong>#print_screen</strong> : Nil</a>
+        
+          <div class="summary"><p>Print Screen</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#redo%3ANil-instance-method" class="signature"><strong>#redo</strong> : Nil</a>
+        
+          <div class="summary"><p>Redo (Ctrl+Y)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#repeat_key%28key_name%3AString%7CSymbol%7CInt32%2Ccount%3AInt32%2Cdelay%3AFloat64%3D0.1%29%3ANil-instance-method" class="signature"><strong>#repeat_key</strong>(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = <span class="n">0.1</span>) : Nil</a>
+        
+          <div class="summary"><p>Press a key multiple times</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#run_dialog%3ANil-instance-method" class="signature"><strong>#run_dialog</strong> : Nil</a>
+        
+          <div class="summary"><p>Win+R (run dialog)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#save%3ANil-instance-method" class="signature"><strong>#save</strong> : Nil</a>
+        
+          <div class="summary"><p>Save (Ctrl+S)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#screenshot_window%3ANil-instance-method" class="signature"><strong>#screenshot_window</strong> : Nil</a>
+        
+          <div class="summary"><p>Alt+Print Screen (screenshot active window)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#select_all%3ANil-instance-method" class="signature"><strong>#select_all</strong> : Nil</a>
+        
+          <div class="summary"><p>Select All (Ctrl+A)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#show_desktop%3ANil-instance-method" class="signature"><strong>#show_desktop</strong> : Nil</a>
+        
+          <div class="summary"><p>Win+D (show desktop)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#task_manager%3ANil-instance-method" class="signature"><strong>#task_manager</strong> : Nil</a>
+        
+          <div class="summary"><p>Ctrl+Shift+Esc (task manager)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type%28text%3AString%29%3ANil-instance-method" class="signature"><strong>#type</strong>(text : String) : Nil</a>
+        
+          <div class="summary"><p>Type a string of text</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#type_with_delay%28text%3AString%2Cdelay%3AFloat64%3D0.05%29%3ANil-instance-method" class="signature"><strong>#type_with_delay</strong>(text : String, delay : Float64 = <span class="n">0.05</span>) : Nil</a>
+        
+          <div class="summary"><p>Type text with delay between characters</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#undo%3ANil-instance-method" class="signature"><strong>#undo</strong> : Nil</a>
+        
+          <div class="summary"><p>Undo (Ctrl+Z)</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#windows_key%3ANil-instance-method" class="signature"><strong>#windows_key</strong> : Nil</a>
+        
+          <div class="summary"><p>Windows key (open start menu)</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="alt_f4:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>alt_f4</strong> : Nil
+
+        <a class="method-permalink" href="#alt_f4%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Alt+F4 (close window)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L208" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="alt_tab:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>alt_tab</strong> : Nil
+
+        <a class="method-permalink" href="#alt_tab%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Alt+Tab (switch windows)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L198" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="copy:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>copy</strong> : Nil
+
+        <a class="method-permalink" href="#copy%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Copy (Ctrl+C)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="cut:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>cut</strong> : Nil
+
+        <a class="method-permalink" href="#cut%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Cut (Ctrl+X)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L158" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="find:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>find</strong> : Nil
+
+        <a class="method-permalink" href="#find%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Find (Ctrl+F)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L193" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="get_key_state(key_name:String|Symbol|Int32):Int16-instance-method">
+      <div class="signature">
+        
+        def <strong>get_key_state</strong>(key_name : String | Symbol | Int32) : Int16
+
+        <a class="method-permalink" href="#get_key_state%28key_name%3AString%7CSymbol%7CInt32%29%3AInt16-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get the current state of a key</p>
+<ul>
+<li>key_name: Key name (String, Symbol, or Integer virtual key code)
+Returns: Key state (negative if pressed, positive if toggled on for toggle keys)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L42" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="hold_key(key_name:String|Symbol|Int32,duration:Float64):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>hold_key</strong>(key_name : String | Symbol | Int32, duration : Float64) : Nil
+
+        <a class="method-permalink" href="#hold_key%28key_name%3AString%7CSymbol%7CInt32%2Cduration%3AFloat64%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Hold a key for a specified duration</p>
+<ul>
+<li>key_name: Key name to hold</li>
+<li>duration: Duration to hold the key in seconds</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L268" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_combination(keys:Array(String|Symbol|Int32)):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>key_combination</strong>(keys : Array(String | Symbol | Int32)) : Nil
+
+        <a class="method-permalink" href="#key_combination%28keys%3AArray%28String%7CSymbol%7CInt32%29%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send key combination from array</p>
+<ul>
+<li>keys: Array of key names to press simultaneously</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L123" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_combination(*keys:String|Symbol|Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>key_combination</strong>(*keys : String | Symbol | Int32) : Nil
+
+        <a class="method-permalink" href="#key_combination%28%2Akeys%3AString%7CSymbol%7CInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send key combination (e.g., Ctrl+C, Alt+Tab)</p>
+<ul>
+<li>keys: Array of key names to press simultaneously</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L116" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_down(key_name:String|Symbol|Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>key_down</strong>(key_name : String | Symbol | Int32) : Nil
+
+        <a class="method-permalink" href="#key_down%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Press and hold a key</p>
+<ul>
+<li>key_name: Key name (String, Symbol, or Integer virtual key code)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L19" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_pressed?(key_name:String|Symbol|Int32):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>key_pressed?</strong>(key_name : String | Symbol | Int32) : Bool
+
+        <a class="method-permalink" href="#key_pressed%3F%28key_name%3AString%7CSymbol%7CInt32%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Check if a key is currently pressed</p>
+<ul>
+<li>key_name: Key name (String, Symbol, or Integer virtual key code)
+Returns: true if key is pressed, false otherwise</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L53" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_stroke(key_name:String|Symbol|Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>key_stroke</strong>(key_name : String | Symbol | Int32) : Nil
+
+        <a class="method-permalink" href="#key_stroke%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Press and release a key (key stroke)</p>
+<ul>
+<li>key_name: Key name (String, Symbol, or Integer virtual key code)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L11" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_toggled?(key_name:String|Symbol|Int32):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>key_toggled?</strong>(key_name : String | Symbol | Int32) : Bool
+
+        <a class="method-permalink" href="#key_toggled%3F%28key_name%3AString%7CSymbol%7CInt32%29%3ABool-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Check if a toggle key is currently on (like Caps Lock, Num Lock)</p>
+<ul>
+<li>key_name: Key name (String, Symbol, or Integer virtual key code)
+Returns: true if toggle key is on, false otherwise</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L62" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_up(key_name:String|Symbol|Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>key_up</strong>(key_name : String | Symbol | Int32) : Nil
+
+        <a class="method-permalink" href="#key_up%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Release a key</p>
+<ul>
+<li>key_name: Key name (String, Symbol, or Integer virtual key code)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L30" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="lock_screen:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>lock_screen</strong> : Nil
+
+        <a class="method-permalink" href="#lock_screen%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Win+L (lock screen)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L218" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="new:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>new</strong> : Nil
+
+        <a class="method-permalink" href="#new%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>New (Ctrl+N)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L188" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="open:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>open</strong> : Nil
+
+        <a class="method-permalink" href="#open%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Open (Ctrl+O)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L183" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="paste:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>paste</strong> : Nil
+
+        <a class="method-permalink" href="#paste%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Paste (Ctrl+V)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L153" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="print_screen:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>print_screen</strong> : Nil
+
+        <a class="method-permalink" href="#print_screen%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Print Screen</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L233" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="redo:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>redo</strong> : Nil
+
+        <a class="method-permalink" href="#redo%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Redo (Ctrl+Y)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L173" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="repeat_key(key_name:String|Symbol|Int32,count:Int32,delay:Float64=0.1):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>repeat_key</strong>(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = <span class="n">0.1</span>) : Nil
+
+        <a class="method-permalink" href="#repeat_key%28key_name%3AString%7CSymbol%7CInt32%2Ccount%3AInt32%2Cdelay%3AFloat64%3D0.1%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Press a key multiple times</p>
+<ul>
+<li>key_name: Key name to press</li>
+<li>count: Number of times to press the key</li>
+<li>delay: Delay between presses in seconds (default: 0.1)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L279" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="run_dialog:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>run_dialog</strong> : Nil
+
+        <a class="method-permalink" href="#run_dialog%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Win+R (run dialog)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L228" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="save:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>save</strong> : Nil
+
+        <a class="method-permalink" href="#save%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Save (Ctrl+S)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L178" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="screenshot_window:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>screenshot_window</strong> : Nil
+
+        <a class="method-permalink" href="#screenshot_window%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Alt+Print Screen (screenshot active window)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L238" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="select_all:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>select_all</strong> : Nil
+
+        <a class="method-permalink" href="#select_all%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Select All (Ctrl+A)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L163" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="show_desktop:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>show_desktop</strong> : Nil
+
+        <a class="method-permalink" href="#show_desktop%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Win+D (show desktop)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L223" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="task_manager:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>task_manager</strong> : Nil
+
+        <a class="method-permalink" href="#task_manager%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Ctrl+Shift+Esc (task manager)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L213" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type(text:String):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>type</strong>(text : String) : Nil
+
+        <a class="method-permalink" href="#type%28text%3AString%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Type a string of text</p>
+<ul>
+<li>text: String to type</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L70" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="type_with_delay(text:String,delay:Float64=0.05):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>type_with_delay</strong>(text : String, delay : Float64 = <span class="n">0.05</span>) : Nil
+
+        <a class="method-permalink" href="#type_with_delay%28text%3AString%2Cdelay%3AFloat64%3D0.05%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Type text with delay between characters</p>
+<ul>
+<li>text: String to type</li>
+<li>delay: Delay between characters in seconds (default: 0.05)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L246" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="undo:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>undo</strong> : Nil
+
+        <a class="method-permalink" href="#undo%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Undo (Ctrl+Z)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L168" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="windows_key:Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>windows_key</strong> : Nil
+
+        <a class="method-permalink" href="#windows_key%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Windows key (open start menu)</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/keyboard.cr#L203" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="auto_click">
+
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+  <meta name="repository-name" content="auto_click">
+  <title>AutoClick - auto_click main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="index.html">
+          auto_click
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="auto_click/AutoClick" data-name="autoclick">
+      <a href="AutoClick.html">AutoClick</a>
+      
+        <ul>
+  
+  <li class=" " data-id="auto_click/AutoClick/InputStructure" data-name="autoclick::inputstructure">
+      <a href="AutoClick/InputStructure.html">InputStructure</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Keyboard" data-name="autoclick::keyboard">
+      <a href="AutoClick/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Mouse" data-name="autoclick::mouse">
+      <a href="AutoClick/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/User32" data-name="autoclick::user32">
+      <a href="AutoClick/User32.html">User32</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/VirtualKey" data-name="autoclick::virtualkey">
+      <a href="AutoClick/VirtualKey.html">VirtualKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> AutoClick
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>AutoClick - Windows GUI automation library for Crystal</p>
+<p>This library provides mouse and keyboard automation capabilities
+by interfacing with Windows User32 API functions.</p>
+<p>Usage:</p>
+<pre><code class="language-crystal"><span class="c"># Method 1: Include the module</span>
+<span class="k">include</span> <span class="t">AutoClick</span>
+left_click()
+mouse_move(<span class="n">100</span>, <span class="n">100</span>)
+<span class="k">type</span>(<span class="s">&quot;Hello World&quot;</span>)
+
+<span class="c"># Method 2: Use as namespace</span>
+<span class="t">AutoClick</span>.left_click
+<span class="t">AutoClick</span>.mouse_move(<span class="n">100</span>, <span class="n">100</span>)
+<span class="t">AutoClick</span>.<span class="k">type</span>(<span class="s">&quot;Hello World&quot;</span>)</code></pre>
+
+
+
+
+
+
+
+  <h2>
+    <a id="included-modules" class="anchor" href="#included-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Included Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="AutoClick/Keyboard.html">AutoClick::Keyboard</a></li>
+    
+      <li class="other-type"><a href="AutoClick/Mouse.html">AutoClick::Mouse</a></li>
+    
+  </ul>
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="AutoClick.html">AutoClick</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click.cr#L25" target="_blank">
+        auto_click.cr
+      </a>
+    
+    <br/>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/user32.cr#L5" target="_blank">
+        auto_click/user32.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="VERSION">
+        <strong>VERSION</strong> = <code><span class="s">&quot;0.5.0&quot;</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#cursor_position%3AArray%28Int32%29-instance-method" class="signature"><strong>#cursor_position</strong> : Array(Int32)</a>
+        
+          <div class="summary"><p>Get current cursor position</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_move%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method" class="signature"><strong>#mouse_move</strong>(x : Int32, y : Int32) : Nil</a>
+        
+          <div class="summary"><p>Move cursor to specified coordinates</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_move_percentage%28x_percent%3AFloat64%2Cy_percent%3AFloat64%29%3ANil-instance-method" class="signature"><strong>#mouse_move_percentage</strong>(x_percent : Float64, y_percent : Float64) : Nil</a>
+        
+          <div class="summary"><p>Move cursor using percentage of screen dimensions</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#screen_resolution%3AArray%28Int32%29-instance-method" class="signature"><strong>#screen_resolution</strong> : Array(Int32)</a>
+        
+          <div class="summary"><p>Get current screen resolution</p></div>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="AutoClick/Keyboard.html">AutoClick::Keyboard</a></code></h3>
+  
+  
+    <a href="AutoClick/Keyboard.html#alt_f4%3ANil-instance-method" class="tooltip">
+      <span>alt_f4 : Nil</span>
+    alt_f4</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#alt_tab%3ANil-instance-method" class="tooltip">
+      <span>alt_tab : Nil</span>
+    alt_tab</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#copy%3ANil-instance-method" class="tooltip">
+      <span>copy : Nil</span>
+    copy</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#cut%3ANil-instance-method" class="tooltip">
+      <span>cut : Nil</span>
+    cut</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#find%3ANil-instance-method" class="tooltip">
+      <span>find : Nil</span>
+    find</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#get_key_state%28key_name%3AString%7CSymbol%7CInt32%29%3AInt16-instance-method" class="tooltip">
+      <span>get_key_state(key_name : String | Symbol | Int32) : Int16</span>
+    get_key_state</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#hold_key%28key_name%3AString%7CSymbol%7CInt32%2Cduration%3AFloat64%29%3ANil-instance-method" class="tooltip">
+      <span>hold_key(key_name : String | Symbol | Int32, duration : Float64) : Nil</span>
+    hold_key</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_combination%28keys%3AArray%28String%7CSymbol%7CInt32%29%29%3ANil-instance-method" class="tooltip">
+      <span>key_combination(keys : Array(String | Symbol | Int32)) : Nil<br/>key_combination(*keys : String | Symbol | Int32) : Nil</span>
+    key_combination</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_down%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="tooltip">
+      <span>key_down(key_name : String | Symbol | Int32) : Nil</span>
+    key_down</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_pressed%3F%28key_name%3AString%7CSymbol%7CInt32%29%3ABool-instance-method" class="tooltip">
+      <span>key_pressed?(key_name : String | Symbol | Int32) : Bool</span>
+    key_pressed?</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_stroke%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="tooltip">
+      <span>key_stroke(key_name : String | Symbol | Int32) : Nil</span>
+    key_stroke</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_toggled%3F%28key_name%3AString%7CSymbol%7CInt32%29%3ABool-instance-method" class="tooltip">
+      <span>key_toggled?(key_name : String | Symbol | Int32) : Bool</span>
+    key_toggled?</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_up%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="tooltip">
+      <span>key_up(key_name : String | Symbol | Int32) : Nil</span>
+    key_up</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#lock_screen%3ANil-instance-method" class="tooltip">
+      <span>lock_screen : Nil</span>
+    lock_screen</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#new%3ANil-instance-method" class="tooltip">
+      <span>new : Nil</span>
+    new</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#open%3ANil-instance-method" class="tooltip">
+      <span>open : Nil</span>
+    open</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#paste%3ANil-instance-method" class="tooltip">
+      <span>paste : Nil</span>
+    paste</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#print_screen%3ANil-instance-method" class="tooltip">
+      <span>print_screen : Nil</span>
+    print_screen</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#redo%3ANil-instance-method" class="tooltip">
+      <span>redo : Nil</span>
+    redo</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#repeat_key%28key_name%3AString%7CSymbol%7CInt32%2Ccount%3AInt32%2Cdelay%3AFloat64%3D0.1%29%3ANil-instance-method" class="tooltip">
+      <span>repeat_key(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = <span class="n">0.1</span>) : Nil</span>
+    repeat_key</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#run_dialog%3ANil-instance-method" class="tooltip">
+      <span>run_dialog : Nil</span>
+    run_dialog</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#save%3ANil-instance-method" class="tooltip">
+      <span>save : Nil</span>
+    save</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#screenshot_window%3ANil-instance-method" class="tooltip">
+      <span>screenshot_window : Nil</span>
+    screenshot_window</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#select_all%3ANil-instance-method" class="tooltip">
+      <span>select_all : Nil</span>
+    select_all</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#show_desktop%3ANil-instance-method" class="tooltip">
+      <span>show_desktop : Nil</span>
+    show_desktop</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#task_manager%3ANil-instance-method" class="tooltip">
+      <span>task_manager : Nil</span>
+    task_manager</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#type%28text%3AString%29%3ANil-instance-method" class="tooltip">
+      <span>type(text : String) : Nil</span>
+    type</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#type_with_delay%28text%3AString%2Cdelay%3AFloat64%3D0.05%29%3ANil-instance-method" class="tooltip">
+      <span>type_with_delay(text : String, delay : Float64 = <span class="n">0.05</span>) : Nil</span>
+    type_with_delay</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#undo%3ANil-instance-method" class="tooltip">
+      <span>undo : Nil</span>
+    undo</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#windows_key%3ANil-instance-method" class="tooltip">
+      <span>windows_key : Nil</span>
+    windows_key</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+      
+
+  <h3>Instance methods inherited from module <code><a href="AutoClick/Mouse.html">AutoClick::Mouse</a></code></h3>
+  
+  
+    <a href="AutoClick/Mouse.html#click_at%28x%3AInt32%2Cy%3AInt32%2Cbutton%3ASymbol%3D%3Aleft%29%3ANil-instance-method" class="tooltip">
+      <span>click_at(x : Int32, y : Int32, button : Symbol = <span class="n">:left</span>) : Nil</span>
+    click_at</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#double_click%3ANil-instance-method" class="tooltip">
+      <span>double_click : Nil</span>
+    double_click</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#double_click_at%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method" class="tooltip">
+      <span>double_click_at(x : Int32, y : Int32) : Nil</span>
+    double_click_at</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%2Cbutton%3ASymbol%3D%3Aleft%29%3ANil-instance-method" class="tooltip">
+      <span>drag(sx : Int32, sy : Int32, ex : Int32, ey : Int32, button : Symbol = <span class="n">:left</span>) : Nil</span>
+    drag</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#left_click%3ANil-instance-method" class="tooltip">
+      <span>left_click : Nil</span>
+    left_click</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#left_drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%29%3ANil-instance-method" class="tooltip">
+      <span>left_drag(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil</span>
+    left_drag</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#middle_click%3ANil-instance-method" class="tooltip">
+      <span>middle_click : Nil</span>
+    middle_click</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#mouse_button_pressed%3F%28button%3ASymbol%29%3ABool-instance-method" class="tooltip">
+      <span>mouse_button_pressed?(button : Symbol) : Bool</span>
+    mouse_button_pressed?</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#mouse_down%28button_name%3ASymbol%29%3ANil-instance-method" class="tooltip">
+      <span>mouse_down(button_name : Symbol) : Nil</span>
+    mouse_down</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#mouse_scroll%28steps%3AInt32%29%3ANil-instance-method" class="tooltip">
+      <span>mouse_scroll(steps : Int32) : Nil</span>
+    mouse_scroll</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#mouse_up%28button_name%3ASymbol%29%3ANil-instance-method" class="tooltip">
+      <span>mouse_up(button_name : Symbol) : Nil</span>
+    mouse_up</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#right_click%3ANil-instance-method" class="tooltip">
+      <span>right_click : Nil</span>
+    right_click</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#right_drag%28sx%3AInt32%2Csy%3AInt32%2Cex%3AInt32%2Cey%3AInt32%29%3ANil-instance-method" class="tooltip">
+      <span>right_drag(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil</span>
+    right_drag</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#scroll_down%28steps%3AInt32%3D1%29%3ANil-instance-method" class="tooltip">
+      <span>scroll_down(steps : Int32 = <span class="n">1</span>) : Nil</span>
+    scroll_down</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#scroll_up%28steps%3AInt32%3D1%29%3ANil-instance-method" class="tooltip">
+      <span>scroll_up(steps : Int32 = <span class="n">1</span>) : Nil</span>
+    scroll_up</a>, 
+    
+  
+    <a href="AutoClick/Mouse.html#smooth_move%28x%3AInt32%2Cy%3AInt32%2Csteps%3AInt32%3D10%2Cdelay%3AFloat64%3D0.01%29%3ANil-instance-method" class="tooltip">
+      <span>smooth_move(x : Int32, y : Int32, steps : Int32 = <span class="n">10</span>, delay : Float64 = <span class="n">0.01</span>) : Nil</span>
+    smooth_move</a>
+    
+  
+
+
+      
+
+
+      
+
+
+      
+
+
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="cursor_position:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>cursor_position</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#cursor_position%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get current cursor position</p>
+<p>Returns an array containing [x, y] coordinates</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_move(x:Int32,y:Int32):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_move</strong>(x : Int32, y : Int32) : Nil
+
+        <a class="method-permalink" href="#mouse_move%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Move cursor to specified coordinates</p>
+<ul>
+<li>x: X coordinate in pixels</li>
+<li>y: Y coordinate in pixels</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click.cr#L55" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_move_percentage(x_percent:Float64,y_percent:Float64):Nil-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_move_percentage</strong>(x_percent : Float64, y_percent : Float64) : Nil
+
+        <a class="method-permalink" href="#mouse_move_percentage%28x_percent%3AFloat64%2Cy_percent%3AFloat64%29%3ANil-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Move cursor using percentage of screen dimensions</p>
+<ul>
+<li>x_percent: X position as percentage (0.0 to 1.0)</li>
+<li>y_percent: Y position as percentage (0.0 to 1.0)</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click.cr#L63" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="screen_resolution:Array(Int32)-instance-method">
+      <div class="signature">
+        
+        def <strong>screen_resolution</strong> : Array(Int32)
+
+        <a class="method-permalink" href="#screen_resolution%3AArray%28Int32%29-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Get current screen resolution</p>
+<p>Returns an array containing [width, height] in pixels</p>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Crystal Docs 1.16.3">
+<meta name="crystal_docs.project_version" content="main">
+<meta name="crystal_docs.project_name" content="auto_click">
+
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+  <meta name="repository-name" content="auto_click">
+  <title>AutoClick::InputStructure - auto_click main</title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill="currentColor" fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+<input type="checkbox" id="sidebar-btn">
+<label for="sidebar-btn" id="sidebar-btn-label">
+  <svg class="open" xmlns="http://www.w3.org/2000/svg" height="2em" width="2em" viewBox="0 0 512 512"><title>Open Sidebar</title><path fill="currentColor" d="M80 96v64h352V96H80zm0 112v64h352v-64H80zm0 112v64h352v-64H80z"></path></svg>
+  <svg class="close" xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 512 512"><title>Close Sidebar</title><path fill="currentColor" d="m118.6 73.4-45.2 45.2L210.7 256 73.4 393.4l45.2 45.2L256 301.3l137.4 137.3 45.2-45.2L301.3 256l137.3-137.4-45.2-45.2L256 210.7Z"></path></svg>
+</label>
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="../index.html">
+          auto_click
+        </a>
+      </h1>
+
+      <span class="project-version">
+        main
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="auto_click/AutoClick" data-name="autoclick">
+      <a href="../AutoClick.html">AutoClick</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="auto_click/AutoClick/InputStructure" data-name="autoclick::inputstructure">
+      <a href="../AutoClick/InputStructure.html">InputStructure</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Keyboard" data-name="autoclick::keyboard">
+      <a href="../AutoClick/Keyboard.html">Keyboard</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/Mouse" data-name="autoclick::mouse">
+      <a href="../AutoClick/Mouse.html">Mouse</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/User32" data-name="autoclick::user32">
+      <a href="../AutoClick/User32.html">User32</a>
+      
+    </li>
+  
+  <li class=" " data-id="auto_click/AutoClick/VirtualKey" data-name="autoclick::virtualkey">
+      <a href="../AutoClick/VirtualKey.html">VirtualKey</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">
+    module
+  </span> AutoClick::<wbr>InputStructure
+
+</h1>
+
+
+
+
+
+  <h2>
+    <a id="overview" class="anchor" href="#overview">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Overview
+  </h2>
+
+  <p>Windows INPUT structure definitions for AutoClick</p>
+<p>This module provides Crystal structs that match the Windows INPUT structure
+used by the SendInput API for mouse and keyboard events.</p>
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../AutoClick/InputStructure.html">AutoClick::InputStructure</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L5" target="_blank">
+        auto_click/input_structure.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+  
+    <h2>
+      <a id="constant-summary" class="anchor" href="#constant-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+      Constant Summary
+    </h2>
+  
+  <dl>
+    
+      <dt class="entry-const" id="INPUT_HARDWARE">
+        <strong>INPUT_HARDWARE</strong> = <code><span class="n">2_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="INPUT_KEYBOARD">
+        <strong>INPUT_KEYBOARD</strong> = <code><span class="n">1_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="INPUT_MOUSE">
+        <strong>INPUT_MOUSE</strong> = <code><span class="n">0_u32</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Input types</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="KEYEVENTF_EXTENDEDKEY">
+        <strong>KEYEVENTF_EXTENDEDKEY</strong> = <code><span class="n">1_u32</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Keyboard event flags</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="KEYEVENTF_KEYUP">
+        <strong>KEYEVENTF_KEYUP</strong> = <code><span class="n">2_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KEYEVENTF_SCANCODE">
+        <strong>KEYEVENTF_SCANCODE</strong> = <code><span class="n">8_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="KEYEVENTF_UNICODE">
+        <strong>KEYEVENTF_UNICODE</strong> = <code><span class="n">4_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_ABSOLUTE">
+        <strong>MOUSEEVENTF_ABSOLUTE</strong> = <code><span class="n">32768_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_HWHEEL">
+        <strong>MOUSEEVENTF_HWHEEL</strong> = <code><span class="n">4096_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_LEFTDOWN">
+        <strong>MOUSEEVENTF_LEFTDOWN</strong> = <code><span class="n">2_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_LEFTUP">
+        <strong>MOUSEEVENTF_LEFTUP</strong> = <code><span class="n">4_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_MIDDLEDOWN">
+        <strong>MOUSEEVENTF_MIDDLEDOWN</strong> = <code><span class="n">32_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_MIDDLEUP">
+        <strong>MOUSEEVENTF_MIDDLEUP</strong> = <code><span class="n">64_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_MOVE">
+        <strong>MOUSEEVENTF_MOVE</strong> = <code><span class="n">1_u32</span></code>
+      </dt>
+      
+      <dd class="entry-const-doc">
+        <p>Mouse event flags</p>
+      </dd>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_RIGHTDOWN">
+        <strong>MOUSEEVENTF_RIGHTDOWN</strong> = <code><span class="n">8_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_RIGHTUP">
+        <strong>MOUSEEVENTF_RIGHTUP</strong> = <code><span class="n">16_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_WHEEL">
+        <strong>MOUSEEVENTF_WHEEL</strong> = <code><span class="n">2048_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_XDOWN">
+        <strong>MOUSEEVENTF_XDOWN</strong> = <code><span class="n">128_u32</span></code>
+      </dt>
+      
+    
+      <dt class="entry-const" id="MOUSEEVENTF_XUP">
+        <strong>MOUSEEVENTF_XUP</strong> = <code><span class="n">256_u32</span></code>
+      </dt>
+      
+    
+  </dl>
+
+
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#key_down_input%28vk%3AUInt16%29%3ABytes-instance-method" class="signature"><strong>#key_down_input</strong>(vk : UInt16) : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#key_up_input%28vk%3AUInt16%29%3ABytes-instance-method" class="signature"><strong>#key_up_input</strong>(vk : UInt16) : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#keyboard_input%28vk%3AUInt16%2Cscan%3AUInt16%3D0_u16%2Cflags%3AUInt32%3D0_u32%2Ctime%3AUInt32%3D0_u32%2Cextra_info%3AUInt64%3D0_u64%29%3ABytes-instance-method" class="signature"><strong>#keyboard_input</strong>(vk : UInt16, scan : UInt16 = <span class="n">0_u16</span>, flags : UInt32 = <span class="n">0_u32</span>, time : UInt32 = <span class="n">0_u32</span>, extra_info : UInt64 = <span class="n">0_u64</span>) : Bytes</a>
+        
+          <div class="summary"><p>Create keyboard input structure</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_down_input%3ABytes-instance-method" class="signature"><strong>#left_down_input</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#left_up_input%3ABytes-instance-method" class="signature"><strong>#left_up_input</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#middle_down_input%3ABytes-instance-method" class="signature"><strong>#middle_down_input</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#middle_up_input%3ABytes-instance-method" class="signature"><strong>#middle_up_input</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#mouse_input%28dx%3AInt32%2Cdy%3AInt32%2Cmouse_data%3AUInt32%2Cdw_flags%3AUInt32%2Ctime%3AUInt32%3D0_u32%2Cextra_info%3AUInt64%3D0_u64%29%3ABytes-instance-method" class="signature"><strong>#mouse_input</strong>(dx : Int32, dy : Int32, mouse_data : UInt32, dw_flags : UInt32, time : UInt32 = <span class="n">0_u32</span>, extra_info : UInt64 = <span class="n">0_u64</span>) : Bytes</a>
+        
+          <div class="summary"><p>Create mouse input structure</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_down_input%3ABytes-instance-method" class="signature"><strong>#right_down_input</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#right_up_input%3ABytes-instance-method" class="signature"><strong>#right_up_input</strong> : Bytes</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_multiple_inputs%28inputs%3AArray%28Bytes%29%29%3AUInt32-instance-method" class="signature"><strong>#send_multiple_inputs</strong>(inputs : Array(Bytes)) : UInt32</a>
+        
+          <div class="summary"><p>Send multiple input events</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_single_input%28input%3ABytes%29%3AUInt32-instance-method" class="signature"><strong>#send_single_input</strong>(input : Bytes) : UInt32</a>
+        
+          <div class="summary"><p>Send a single input event</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#wheel_input%28delta%3AInt32%29%3ABytes-instance-method" class="signature"><strong>#wheel_input</strong>(delta : Int32) : Bytes</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+  <div class="methods-inherited">
+    
+  </div>
+
+  
+
+  
+
+  
+
+  
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="key_down_input(vk:UInt16):Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>key_down_input</strong>(vk : UInt16) : Bytes
+
+        <a class="method-permalink" href="#key_down_input%28vk%3AUInt16%29%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L162" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="key_up_input(vk:UInt16):Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>key_up_input</strong>(vk : UInt16) : Bytes
+
+        <a class="method-permalink" href="#key_up_input%28vk%3AUInt16%29%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L166" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="keyboard_input(vk:UInt16,scan:UInt16=0_u16,flags:UInt32=0_u32,time:UInt32=0_u32,extra_info:UInt64=0_u64):Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>keyboard_input</strong>(vk : UInt16, scan : UInt16 = <span class="n">0_u16</span>, flags : UInt32 = <span class="n">0_u32</span>, time : UInt32 = <span class="n">0_u32</span>, extra_info : UInt64 = <span class="n">0_u64</span>) : Bytes
+
+        <a class="method-permalink" href="#keyboard_input%28vk%3AUInt16%2Cscan%3AUInt16%3D0_u16%2Cflags%3AUInt32%3D0_u32%2Ctime%3AUInt32%3D0_u32%2Cextra_info%3AUInt64%3D0_u64%29%3ABytes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create keyboard input structure</p>
+<ul>
+<li>vk: Virtual key code</li>
+<li>scan: Hardware scan code</li>
+<li>flags: Keyboard event flags</li>
+<li>time: Timestamp (0 for system time)</li>
+<li>extra_info: Additional info</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L76" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_down_input:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>left_down_input</strong> : Bytes
+
+        <a class="method-permalink" href="#left_down_input%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L132" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="left_up_input:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>left_up_input</strong> : Bytes
+
+        <a class="method-permalink" href="#left_up_input%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L136" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="middle_down_input:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>middle_down_input</strong> : Bytes
+
+        <a class="method-permalink" href="#middle_down_input%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L148" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="middle_up_input:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>middle_up_input</strong> : Bytes
+
+        <a class="method-permalink" href="#middle_up_input%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L152" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="mouse_input(dx:Int32,dy:Int32,mouse_data:UInt32,dw_flags:UInt32,time:UInt32=0_u32,extra_info:UInt64=0_u64):Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>mouse_input</strong>(dx : Int32, dy : Int32, mouse_data : UInt32, dw_flags : UInt32, time : UInt32 = <span class="n">0_u32</span>, extra_info : UInt64 = <span class="n">0_u64</span>) : Bytes
+
+        <a class="method-permalink" href="#mouse_input%28dx%3AInt32%2Cdy%3AInt32%2Cmouse_data%3AUInt32%2Cdw_flags%3AUInt32%2Ctime%3AUInt32%3D0_u32%2Cextra_info%3AUInt64%3D0_u64%29%3ABytes-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Create mouse input structure</p>
+<ul>
+<li>dx: X movement or absolute position</li>
+<li>dy: Y movement or absolute position</li>
+<li>mouse_data: Additional mouse data (wheel delta, etc.)</li>
+<li>dw_flags: Mouse event flags</li>
+<li>time: Timestamp (0 for system time)</li>
+<li>extra_info: Additional info</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L41" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_down_input:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>right_down_input</strong> : Bytes
+
+        <a class="method-permalink" href="#right_down_input%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L140" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="right_up_input:Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>right_up_input</strong> : Bytes
+
+        <a class="method-permalink" href="#right_up_input%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L144" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_multiple_inputs(inputs:Array(Bytes)):UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>send_multiple_inputs</strong>(inputs : Array(Bytes)) : UInt32
+
+        <a class="method-permalink" href="#send_multiple_inputs%28inputs%3AArray%28Bytes%29%29%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send multiple input events</p>
+<ul>
+<li>inputs: Array of input structure bytes</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_single_input(input:Bytes):UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>send_single_input</strong>(input : Bytes) : UInt32
+
+        <a class="method-permalink" href="#send_single_input%28input%3ABytes%29%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send a single input event</p>
+<ul>
+<li>input: Input structure bytes</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L107" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="wheel_input(delta:Int32):Bytes-instance-method">
+      <div class="signature">
+        
+        def <strong>wheel_input</strong>(delta : Int32) : Bytes
+
+        <a class="method-permalink" href="#wheel_input%28delta%3AInt32%29%3ABytes-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/c42208d4b71e262b2e2090f77aa101825adb991e/src/auto_click/input_structure.cr#L156" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+</div>
+
+</body>
+</html>
