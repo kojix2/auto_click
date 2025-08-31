@@ -220,40 +220,41 @@ module AutoClick::VirtualKey
     '~' => {"`", true},  # Shift + `
   }
 
-  # Convert key name to virtual key code
-  def get_vk_code(key : String | Symbol | Int32) : Int32
-    case key
-    when Int32
-      key
-    when Symbol
-      get_vk_code(key.to_s)
-    when String
-      # Handle single characters
-      if key.size == 1
-        char = key[0]
+  # Convert key name to virtual key code (Int32 overload)
+  def get_vk_code(key : Int32) : Int32
+    key
+  end
 
-        # Check if it's a letter (convert to uppercase)
-        if char.ascii_letter?
-          return char.upcase.ord
-        end
+  # Convert key name to virtual key code (Symbol overload)
+  def get_vk_code(key : Symbol) : Int32
+    get_vk_code(key.to_s)
+  end
 
-        # Check if it's a digit
-        if char.ascii_number?
-          return char.ord
-        end
+  # Convert key name to virtual key code (String overload)
+  def get_vk_code(key : String) : Int32
+    # Handle single characters
+    if key.size == 1
+      char = key[0]
 
-        # Check special characters
-        if SPECIAL_CHAR_MAP.has_key?(char)
-          base_key, _ = SPECIAL_CHAR_MAP[char]
-          return get_vk_code(base_key.as(String))
-        end
+      # Check if it's a letter (convert to uppercase)
+      if char.ascii_letter?
+        return char.upcase.ord
       end
 
-      # Look up in key map (case insensitive)
-      KEY_MAP[key.downcase]? || 0
-    else
-      0
+      # Check if it's a digit
+      if char.ascii_number?
+        return char.ord
+      end
+
+      # Check special characters
+      if SPECIAL_CHAR_MAP.has_key?(char)
+        base_key, _ = SPECIAL_CHAR_MAP[char]
+        return get_vk_code(base_key)
+      end
     end
+
+    # Look up in key map (case insensitive)
+    KEY_MAP[key.downcase]? || 0
   end
 
   # Check if a character requires Shift key
@@ -271,7 +272,7 @@ module AutoClick::VirtualKey
       {char.ord, false}
     elsif SPECIAL_CHAR_MAP.has_key?(char)
       base_key, needs_shift = SPECIAL_CHAR_MAP[char]
-      vk = get_vk_code(base_key.as(String))
+      vk = get_vk_code(base_key)
       {vk, needs_shift}
     else
       # Try to find direct mapping
