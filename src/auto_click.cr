@@ -32,7 +32,7 @@ module AutoClick
   # Get current screen resolution
   #
   # Returns an array containing [width, height] in pixels
-  def get_screen_resolution : Array(Int32)
+  def screen_resolution : Array(Int32)
     width = User32.get_system_metrics(0)  # SM_CXSCREEN
     height = User32.get_system_metrics(1) # SM_CYSCREEN
     [width, height]
@@ -61,7 +61,7 @@ module AutoClick
   # - x_percent: X position as percentage (0.0 to 1.0)
   # - y_percent: Y position as percentage (0.0 to 1.0)
   def mouse_move_percentage(x_percent : Float64, y_percent : Float64) : Nil
-    width, height = get_screen_resolution
+    width, height = screen_resolution
     x = (width * x_percent).to_i32
     y = (height * y_percent).to_i32
     mouse_move(x, y)

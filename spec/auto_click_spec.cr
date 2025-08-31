@@ -28,7 +28,7 @@ describe AutoClick do
 
   describe "basic methods existence" do
     it "has screen resolution method" do
-      AutoClick.responds_to?(:get_screen_resolution).should be_true
+      AutoClick.responds_to?(:screen_resolution).should be_true
     end
 
     it "has cursor position method" do

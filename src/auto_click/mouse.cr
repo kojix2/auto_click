@@ -83,19 +83,19 @@ module AutoClick::Mouse
   def left_drag(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil
     # Move to start position
     User32.set_cursor_pos(sx, sy)
-    sleep(0.1)
+    sleep(0.1.seconds)
 
     # Press left button
     mouse_down(:left)
-    sleep(0.1)
+    sleep(0.1.seconds)
 
     # Move to end position
     User32.set_cursor_pos(ex, ey)
-    sleep(0.1)
+    sleep(0.1.seconds)
 
     # Release left button
     mouse_up(:left)
-    sleep(0.1)
+    sleep(0.1.seconds)
   end
 
   # Perform a right mouse drag operation
@@ -107,19 +107,19 @@ module AutoClick::Mouse
   def right_drag(sx : Int32, sy : Int32, ex : Int32, ey : Int32) : Nil
     # Move to start position
     User32.set_cursor_pos(sx, sy)
-    sleep(0.1)
+    sleep(0.1.seconds)
 
     # Press right button
     mouse_down(:right)
-    sleep(0.1)
+    sleep(0.1.seconds)
 
     # Move to end position
     User32.set_cursor_pos(ex, ey)
-    sleep(0.1)
+    sleep(0.1.seconds)
 
     # Release right button
     mouse_up(:right)
-    sleep(0.1)
+    sleep(0.1.seconds)
   end
 
   # Scroll the mouse wheel
@@ -211,7 +211,7 @@ module AutoClick::Mouse
       intermediate_x = (current_x + dx * (i + 1)).to_i32
       intermediate_y = (current_y + dy * (i + 1)).to_i32
       User32.set_cursor_pos(intermediate_x, intermediate_y)
-      sleep(delay) if delay > 0
+      sleep(delay.seconds) if delay > 0
     end
 
     # Ensure we end up exactly at the target

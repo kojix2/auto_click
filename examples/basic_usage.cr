@@ -8,7 +8,7 @@ puts "================================="
 include AutoClick
 
 # Get screen resolution
-width, height = get_screen_resolution
+width, height = screen_resolution
 puts "Screen resolution: #{width}x#{height}"
 
 # Get current cursor position

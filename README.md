@@ -53,7 +53,7 @@ copy()  # Shorthand for Ctrl+C
 paste()  # Shorthand for Ctrl+V
 
 # System information
-width, height = get_screen_resolution()
+width, height = screen_resolution()
 x, y = cursor_position()
 ```
 
@@ -167,7 +167,7 @@ ac.type("Hello World!")
 
 ### System Information
 
-- `get_screen_resolution()` - Get screen width and height
+- `screen_resolution()` - Get screen width and height
 - `cursor_position()` - Get current cursor coordinates
 
 ## Key Names
