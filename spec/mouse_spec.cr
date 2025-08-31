@@ -110,21 +110,21 @@ describe AutoClick::Mouse do
   describe "valid button symbols" do
     it "accepts :left button" do
       # These should not raise errors
-      expect_raises(Exception) do
-        AutoClick::Mouse.mouse_down(:left)
-      end
+      AutoClick::Mouse.mouse_down(:left)
+      # If we reach here, the method accepted the parameter correctly
+      true.should be_true
     end
 
     it "accepts :right button" do
-      expect_raises(Exception) do
-        AutoClick::Mouse.mouse_down(:right)
-      end
+      AutoClick::Mouse.mouse_down(:right)
+      # If we reach here, the method accepted the parameter correctly
+      true.should be_true
     end
 
     it "accepts :middle button" do
-      expect_raises(Exception) do
-        AutoClick::Mouse.mouse_down(:middle)
-      end
+      AutoClick::Mouse.mouse_down(:middle)
+      # If we reach here, the method accepted the parameter correctly
+      true.should be_true
     end
   end
 end
