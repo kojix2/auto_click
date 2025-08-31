@@ -14,8 +14,7 @@ This is a Crystal port of the [Ruby AutoClick library](https://github.com/erinat
 - **Keyboard Operations**: Key presses, text typing with special character support
 - **System Information**: Screen resolution, cursor position, key states
 - **Windows API Integration**: Direct calls to User32.dll functions
-- **Flexible Key Mapping**: Support for multiple key naming conventions
-- **Type Safety**: Crystal's compile-time type checking ensures reliability
+- **Key Mapping**: Support for multiple key naming conventions
 
 ## Installation
 
@@ -69,17 +68,6 @@ require "auto_click"
 AutoClick.left_click()
 AutoClick.mouse_move(100, 100)
 AutoClick.type("Hello World!")
-```
-
-### Method 3: Use instance
-
-```crystal
-require "auto_click"
-
-ac = AutoClick::Instance.new
-ac.left_click()
-ac.mouse_move(100, 100)
-ac.type("Hello World!")
 ```
 
 ## API Reference
