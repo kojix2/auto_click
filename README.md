@@ -2,6 +2,7 @@
 
 [![test](https://github.com/kojix2/auto_click/actions/workflows/test.yml/badge.svg)](https://github.com/kojix2/auto_click/actions/workflows/test.yml)
 [![Lines of Code](https://img.shields.io/endpoint?url=https%3A%2F%2Ftokei.kojix2.net%2Fbadge%2Fgithub%2Fkojix2%2Fauto_click%2Flines)](https://tokei.kojix2.net/github/kojix2/auto_click)
+![Static Badge](https://img.shields.io/badge/HUMAN-VIBE_CODERS-magenta)
 
 A Windows GUI automation library for Crystal that provides mouse and keyboard automation capabilities by interfacing with Windows User32 API functions.
 
