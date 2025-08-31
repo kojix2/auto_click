@@ -202,7 +202,7 @@ module AutoClick::Mouse
     # Get current cursor position
     point = Bytes.new(8)
     User32.get_cursor_pos(point)
-    current_x, current_y = point.to_unsafe.as(Int32*).to_slice(2)
+    current_x, current_y = point.unsafe_slice_of(Int32)
 
     dx = (x - current_x).to_f / steps
     dy = (y - current_y).to_f / steps

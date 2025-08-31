@@ -44,7 +44,7 @@ module AutoClick
   def cursor_position : Array(Int32)
     point = Bytes.new(8)
     User32.get_cursor_pos(point)
-    x, y = point.to_unsafe.as(Int32*).to_slice(2)
+    x, y = point.unsafe_slice_of(Int32)
     [x, y]
   end
 

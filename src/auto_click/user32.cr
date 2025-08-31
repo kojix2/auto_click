@@ -29,7 +29,7 @@ module AutoClick::User32
   # - point: Byte buffer to store the position (8 bytes for x,y coordinates)
   # Returns: 1 on success, 0 on failure
   def get_cursor_pos(point : Bytes) : Int32
-    LibUser32.GetCursorPos(point.to_unsafe.as(Void*))
+    LibUser32.GetCursorPos(point)
   end
 
   # Set cursor position
@@ -47,7 +47,7 @@ module AutoClick::User32
   # - input_size: Size of each input structure in bytes
   # Returns: Number of events successfully sent
   def send_input(inputs : Bytes, count : UInt32, input_size : Int32) : UInt32
-    LibUser32.SendInput(count, inputs.to_unsafe.as(Void*), input_size)
+    LibUser32.SendInput(count, inputs, input_size)
   end
 
   # Get the state of a virtual key
