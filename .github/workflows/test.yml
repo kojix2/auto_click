@@ -25,6 +25,9 @@ jobs:
       - name: Run tests
         run: crystal spec
 
+      - name: Build an example
+        run: crystal build examples/basic_usage.cr
+
   test-mingw:
     name: test (Windows MinGW)
     runs-on: windows-latest
@@ -48,3 +51,7 @@ jobs:
       - name: Run tests
         shell: msys2 {0}
         run: crystal spec
+
+      - name: Build an example
+        shell: msys2 {0}
+        run: crystal build examples/basic_usage.cr
