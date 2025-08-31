@@ -154,7 +154,7 @@ module AutoClick::InputStructure
   end
 
   def wheel_input(delta : Int32) : Bytes
-    mouse_input(0, 0, delta.to_u32, MOUSEEVENTF_WHEEL)
+    mouse_input(0, 0, delta.to_u32!, MOUSEEVENTF_WHEEL)
   end
 
   # Convenience methods for common keyboard events
