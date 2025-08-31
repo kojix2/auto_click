@@ -6,7 +6,7 @@
 
 A Windows GUI automation library for Crystal that provides mouse and keyboard automation capabilities by interfacing with Windows User32 API functions.
 
-This is a Crystal port of the Ruby AutoClick library, maintaining API compatibility while leveraging Crystal's type safety and performance benefits.
+This is a Crystal port of the [Ruby AutoClick library](https://github.com/erinata/auto_click).
 
 ## Features
 
@@ -270,4 +270,4 @@ MIT License. See LICENSE file for details.
 
 ## Credits
 
-This library is a Crystal port of the Ruby AutoClick library by erinata, maintaining API compatibility while adding Crystal's type safety and performance benefits.
+This library is a Crystal port of the [Ruby AutoClick library](https://github.com/erinata/auto_click) by erinata.
