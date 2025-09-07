@@ -163,7 +163,7 @@ needed for mouse and keyboard automation.</p>
   </h2>
   
     
-      <a href="https://github.com/kojix2/auto_click/blob/4ba16c2585aac45f43b4787b7baf19656f1cabcf/src/auto_click/user32.cr#L5" target="_blank">
+      <a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L5" target="_blank">
         auto_click/user32.cr
       </a>
     
@@ -213,9 +213,17 @@ needed for mouse and keyboard automation.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#send_input%28inputs%3ABytes%2Ccount%3AUInt32%2Cinput_size%3AInt32%29%3AUInt32-instance-method" class="signature"><strong>#send_input</strong>(inputs : Bytes, count : UInt32, input_size : Int32) : UInt32</a>
+        <a href="#send_input%28count%3AUInt32%2Cinputs%3ABytes%2Cinput_size%3AInt32%29%3AUInt32-instance-method" class="signature"><strong>#send_input</strong>(count : UInt32, inputs : Bytes, input_size : Int32) : UInt32</a>
         
           <div class="summary"><p>Send input events to the system</p></div>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#send_input%28inputs%3ABytes%2Ccount%3AUInt32%2Cinput_size%3AInt32%29%3AUInt32-instance-method" class="signature"><strong>#send_input</strong>(inputs : Bytes, count : UInt32, input_size : Int32) : UInt32</a>
+        
+          <div class="summary"><p>Deprecated legacy parameter order kept for backward compatibility.</p>
+<p><span class="flag red">DEPRECATED</span>  Use send_input(count, inputs, input_size) matching WinAPI order</p></div>
         
       </li>
     
@@ -270,7 +278,7 @@ Returns: 1 on success, 0 on failure</li>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/4ba16c2585aac45f43b4787b7baf19656f1cabcf/src/auto_click/user32.cr#L31" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L31" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -295,7 +303,7 @@ Returns: Key state (negative if pressed, positive if toggled on)</li>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/4ba16c2585aac45f43b4787b7baf19656f1cabcf/src/auto_click/user32.cr#L57" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L67" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -320,7 +328,36 @@ Returns: The requested system metric value</li>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/4ba16c2585aac45f43b4787b7baf19656f1cabcf/src/auto_click/user32.cr#L65" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L75" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="send_input(count:UInt32,inputs:Bytes,input_size:Int32):UInt32-instance-method">
+      <div class="signature">
+        
+        def <strong>send_input</strong>(count : UInt32, inputs : Bytes, input_size : Int32) : UInt32
+
+        <a class="method-permalink" href="#send_input%28count%3AUInt32%2Cinputs%3ABytes%2Cinput_size%3AInt32%29%3AUInt32-instance-method">#</a>
+      </div>
+      
+        <div class="doc">
+          
+          <p>Send input events to the system</p>
+<p>New canonical order matching WinAPI:
+UINT SendInput(UINT cInputs, LPINPUT pInputs, int cbSize);</p>
+<ul>
+<li>count: Number of INPUT structures</li>
+<li>inputs: Concatenated INPUT structure bytes</li>
+<li>input_size: Size of a single INPUT structure
+Returns: Number of events successfully inserted into the input stream</li>
+</ul>
+        </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L52" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -335,18 +372,15 @@ Returns: The requested system metric value</li>
       
         <div class="doc">
           
-          <p>Send input events to the system</p>
-<ul>
-<li>inputs: Array of input structures</li>
-<li>input_size: Size of each input structure in bytes
-Returns: Number of events successfully sent</li>
-</ul>
+          <p>Deprecated legacy parameter order kept for backward compatibility.
+Will be removed in a future minor release.</p>
+<p><span class="flag red">DEPRECATED</span>  Use send_input(count, inputs, input_size) matching WinAPI order</p>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/4ba16c2585aac45f43b4787b7baf19656f1cabcf/src/auto_click/user32.cr#L49" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L59" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -372,7 +406,7 @@ Returns: 1 on success, 0 on failure</li>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/4ba16c2585aac45f43b4787b7baf19656f1cabcf/src/auto_click/user32.cr#L40" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/dd3bb791b1f934a14f0a42a5225d5045413be82e/src/auto_click/user32.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
