@@ -96,7 +96,8 @@ module AutoClick::InputStructure
     io.write_bytes(flags, IO::ByteFormat::LittleEndian)          # dwFlags (4 bytes)
     io.write_bytes(time, IO::ByteFormat::LittleEndian)           # time (4 bytes)
     io.write_bytes(extra_info, IO::ByteFormat::LittleEndian)     # dwExtraInfo (8 bytes)
-    # Remaining 8 bytes are padding
+    # Remaining 8 bytes are padding (explicitly zero for determinism)
+    io.write_bytes(0_u64, IO::ByteFormat::LittleEndian)
 
     input
   end
