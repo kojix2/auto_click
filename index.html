@@ -191,7 +191,7 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
 <li><code>left_click()</code> - Left mouse button click</li>
 <li><code>right_click()</code> - Right mouse button click</li>
 <li><code>middle_click()</code> - Middle mouse button click</li>
-<li><code>double_click()</code> - Double click</li>
+<li><code>double_click(interval = nil)</code> - Double click (optional custom interval seconds; default derives from system setting)</li>
 </ul>
 <h4><a id="mouse-state-control" class="anchor" href="#mouse-state-control">
   <svg class="octicon-link" aria-hidden="true">
@@ -240,7 +240,7 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
 </a>Utility Methods</h4>
 <ul>
 <li><code>click_at(x, y, button)</code> - Click at specific coordinates</li>
-<li><code>double_click_at(x, y)</code> - Double click at coordinates</li>
+<li><code>double_click_at(x, y, interval = nil)</code> - Double click at coordinates with optional interval</li>
 <li><code>mouse_button_pressed?(button)</code> - Check if button is pressed</li>
 </ul>
 <h3><a id="keyboard-operations" class="anchor" href="#keyboard-operations">
@@ -307,11 +307,11 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
 <li><code>key_pressed?(key_name)</code> - Check if key is pressed</li>
 <li><code>key_toggled?(key_name)</code> - Check if toggle key is on</li>
 </ul>
-<h4><a id="utility-methods-1" class="anchor" href="#utility-methods-1">
+<h4><a id="utility" class="anchor" href="#utility">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
   </svg>
-</a>Utility Methods</h4>
+</a>Utility</h4>
 <ul>
 <li><code>hold_key(key_name, duration)</code> - Hold key for duration</li>
 <li><code>repeat_key(key_name, count, delay)</code> - Press key multiple times</li>

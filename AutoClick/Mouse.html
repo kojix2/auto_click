@@ -177,7 +177,7 @@ clicking, dragging, scrolling, and cursor movement.</p>
   </h2>
   
     
-      <a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L5" target="_blank">
+      <a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L5" target="_blank">
         auto_click/mouse.cr
       </a>
     
@@ -213,14 +213,14 @@ clicking, dragging, scrolling, and cursor movement.</p>
       </li>
     
       <li class="entry-summary">
-        <a href="#double_click%3ANil-instance-method" class="signature"><strong>#double_click</strong> : Nil</a>
+        <a href="#double_click%28interval%3AFloat64%7CNil%3Dnil%29%3ANil-instance-method" class="signature"><strong>#double_click</strong>(interval : Float64 | Nil = <span class="n">nil</span>) : Nil</a>
         
           <div class="summary"><p>Perform a double click</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#double_click_at%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method" class="signature"><strong>#double_click_at</strong>(x : Int32, y : Int32) : Nil</a>
+        <a href="#double_click_at%28x%3AInt32%2Cy%3AInt32%2Cinterval%3AFloat64%7CNil%3Dnil%29%3ANil-instance-method" class="signature"><strong>#double_click_at</strong>(x : Int32, y : Int32, interval : Float64 | Nil = <span class="n">nil</span>) : Nil</a>
         
           <div class="summary"><p>Double click at specific coordinates</p></div>
         
@@ -362,38 +362,43 @@ clicking, dragging, scrolling, and cursor movement.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L157" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L166" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="double_click:Nil-instance-method">
+    <div class="entry-detail" id="double_click(interval:Float64|Nil=nil):Nil-instance-method">
       <div class="signature">
         
-        def <strong>double_click</strong> : Nil
+        def <strong>double_click</strong>(interval : Float64 | Nil = <span class="n">nil</span>) : Nil
 
-        <a class="method-permalink" href="#double_click%3ANil-instance-method">#</a>
+        <a class="method-permalink" href="#double_click%28interval%3AFloat64%7CNil%3Dnil%29%3ANil-instance-method">#</a>
       </div>
       
         <div class="doc">
           
           <p>Perform a double click</p>
+<ul>
+<li>interval: seconds to wait between the two clicks. If nil, a heuristic
+based on system double-click time (50% of it) is used.
+Default: nil</li>
+</ul>
         </div>
       
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L36" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L40" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="double_click_at(x:Int32,y:Int32):Nil-instance-method">
+    <div class="entry-detail" id="double_click_at(x:Int32,y:Int32,interval:Float64|Nil=nil):Nil-instance-method">
       <div class="signature">
         
-        def <strong>double_click_at</strong>(x : Int32, y : Int32) : Nil
+        def <strong>double_click_at</strong>(x : Int32, y : Int32, interval : Float64 | Nil = <span class="n">nil</span>) : Nil
 
-        <a class="method-permalink" href="#double_click_at%28x%3AInt32%2Cy%3AInt32%29%3ANil-instance-method">#</a>
+        <a class="method-permalink" href="#double_click_at%28x%3AInt32%2Cy%3AInt32%2Cinterval%3AFloat64%7CNil%3Dnil%29%3ANil-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -408,7 +413,7 @@ clicking, dragging, scrolling, and cursor movement.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L175" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L184" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -436,7 +441,7 @@ clicking, dragging, scrolling, and cursor movement.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L187" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L196" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -457,7 +462,7 @@ clicking, dragging, scrolling, and cursor movement.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L9" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L9" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -484,7 +489,7 @@ clicking, dragging, scrolling, and cursor movement.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L83" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L92" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -505,7 +510,7 @@ clicking, dragging, scrolling, and cursor movement.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L27" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L27" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -530,7 +535,7 @@ Returns: true if button is pressed, false otherwise</li>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L228" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L237" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -554,7 +559,7 @@ Returns: true if button is pressed, false otherwise</li>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L44" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L53" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -581,7 +586,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L131" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L140" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -605,7 +610,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L71" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -626,7 +631,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L18" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -653,7 +658,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L107" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L116" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -677,7 +682,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L148" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L157" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -701,7 +706,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L141" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L150" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -728,7 +733,7 @@ Negative =&gt; scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)</
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/6024bdbe64491ea1e2a02887240c50ed867a811e/src/auto_click/mouse.cr#L204" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/7e245c23b301caffdc335c29623a91cbc5462637/src/auto_click/mouse.cr#L213" target="_blank">View source</a>]
         
       </div>
     </div>
