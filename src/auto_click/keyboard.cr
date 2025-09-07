@@ -5,6 +5,20 @@
 module AutoClick::Keyboard
   extend self
 
+  # When true, the old behavior of temporarily disabling Caps Lock is used.
+  # When false (default), we preserve current Caps Lock state and adjust Shift logic.
+  @@auto_toggle_capslock = false
+
+  # Enable/disable legacy auto toggle behavior.
+  def auto_toggle_capslock=(value : Bool)
+    @@auto_toggle_capslock = value
+  end
+
+  # Query current auto toggle setting.
+  def auto_toggle_capslock? : Bool
+    @@auto_toggle_capslock
+  end
+
   # Press and release a key (key stroke)
   #
   # - key_name: Key name (String, Symbol, or Integer virtual key code)
@@ -68,27 +82,50 @@ module AutoClick::Keyboard
   #
   # - text: String to type
   def type(text : String) : Nil
-    # Check if Caps Lock is on and turn it off if needed
     caps_on = key_toggled?("capslock")
-    if caps_on
-      key_stroke("capslock")
-    end
-
-    text.each_char do |char|
-      type_char(char)
-    end
-
-    # Restore Caps Lock state if it was on
-    if caps_on
-      key_stroke("capslock")
+    if @@auto_toggle_capslock
+      # Legacy behavior: temporarily disable Caps Lock for predictable shift usage
+      if caps_on
+        key_stroke("capslock")
+      end
+      text.each_char { |char| type_char(char, caps_on: false) }
+      if caps_on
+        key_stroke("capslock")
+      end
+    else
+      # New behavior: respect existing Caps Lock state without toggling
+      text.each_char { |char| type_char(char, caps_on: caps_on) }
     end
   end
 
   # Type a single character
   #
   # - char: Character to type
-  private def type_char(char : Char) : Nil
+  private def type_char(char : Char, *, caps_on : Bool) : Nil
+    # Derive vk_code and whether Shift is required taking Caps Lock into account.
     vk_code, needs_shift = VirtualKey.get_key_combination(char)
+
+    # Adjust letter handling when we are respecting caps state (i.e., not legacy toggle path)
+    if caps_on
+      if char.ascii_letter?
+        # With Caps Lock ON: Shift inverts case
+        if char.ascii_uppercase?
+          # Want uppercase -> do NOT use Shift
+          needs_shift = false
+        else
+          # Want lowercase -> need Shift to invert
+          needs_shift = true
+        end
+        vk_code = char.upcase.ord
+      end
+    else
+      if char.ascii_letter?
+        # Without Caps Lock: uppercase needs Shift, lowercase not
+        needs_shift = char.ascii_uppercase?
+        vk_code = char.upcase.ord
+      end
+    end
+
     return if vk_code == 0
 
     inputs = [] of Bytes
@@ -244,20 +281,35 @@ module AutoClick::Keyboard
   # - text: String to type
   # - delay: Delay between characters in seconds (default: 0.05)
   def type_with_delay(text : String, delay : Float64 = 0.05) : Nil
-    # Check if Caps Lock is on and turn it off if needed
     caps_on = key_toggled?("capslock")
-    if caps_on
-      key_stroke("capslock")
+    if @@auto_toggle_capslock
+      if caps_on
+        key_stroke("capslock")
+      end
+      text.each_char do |char|
+        type_char(char, caps_on: false)
+        sleep(delay) if delay > 0
+      end
+      if caps_on
+        key_stroke("capslock")
+      end
+    else
+      text.each_char do |char|
+        type_char(char, caps_on: caps_on)
+        sleep(delay) if delay > 0
+      end
     end
+  end
 
-    text.each_char do |char|
-      type_char(char)
-      sleep(delay) if delay > 0
-    end
-
-    # Restore Caps Lock state if it was on
+  # Internal helper (debug/testing) to compute whether shift would be used for a letter
+  # given a desired character and caps lock state without mutating real state.
+  def __debug_letter_shift_needed(char : Char, caps_on : Bool) : Bool
+    raise ArgumentError.new("Not a letter") unless char.ascii_letter?
     if caps_on
-      key_stroke("capslock")
+      # Shift inverts case when caps lock is ON
+      !char.ascii_uppercase?
+    else
+      char.ascii_uppercase?
     end
   end
 
