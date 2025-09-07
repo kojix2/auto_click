@@ -79,7 +79,7 @@ AutoClick.type("Hello World!")
 - `left_click()` - Left mouse button click
 - `right_click()` - Right mouse button click
 - `middle_click()` - Middle mouse button click
-- `double_click()` - Double click
+- `double_click(interval = nil)` - Double click (optional custom interval seconds; default derives from system setting)
 
 #### Mouse State Control
 
@@ -108,7 +108,7 @@ AutoClick.type("Hello World!")
 #### Utility Methods
 
 - `click_at(x, y, button)` - Click at specific coordinates
-- `double_click_at(x, y)` - Double click at coordinates
+- `double_click_at(x, y, interval = nil)` - Double click at coordinates with optional interval
 - `mouse_button_pressed?(button)` - Check if button is pressed
 
 ### Keyboard Operations
@@ -152,7 +152,7 @@ AutoClick.type("Hello World!")
 - `key_pressed?(key_name)` - Check if key is pressed
 - `key_toggled?(key_name)` - Check if toggle key is on
 
-#### Utility Methods
+#### Utility
 
 - `hold_key(key_name, duration)` - Hold key for duration
 - `repeat_key(key_name, count, delay)` - Press key multiple times

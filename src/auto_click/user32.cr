@@ -22,6 +22,8 @@ module AutoClick::User32
 
     # Get system metrics
     fun GetSystemMetrics(nIndex : Int32) : Int32
+    # Get double-click time (in milliseconds)
+    fun GetDoubleClickTime : UInt32
   end
 
   # Get current cursor position
@@ -74,5 +76,10 @@ module AutoClick::User32
   # Returns: The requested system metric value
   def get_system_metrics(index : Int32) : Int32
     LibUser32.GetSystemMetrics(index)
+  end
+
+  # Get system double-click time (milliseconds)
+  def get_double_click_time : UInt32
+    LibUser32.GetDoubleClickTime
   end
 end

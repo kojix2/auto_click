@@ -33,8 +33,17 @@ module AutoClick::Mouse
   end
 
   # Perform a double click
-  def double_click : Nil
+  #
+  # - interval: seconds to wait between the two clicks. If nil, a heuristic
+  #             based on system double-click time (50% of it) is used.
+  #             Default: nil
+  def double_click(interval : Float64? = nil) : Nil
     left_click
+    # Determine interval (system double-click time is max allowed). Use half for safety.
+    effective = interval || (User32.get_double_click_time / 1000.0) * 0.5
+    if effective > 0
+      sleep(effective.seconds)
+    end
     left_click
   end
 
@@ -172,9 +181,9 @@ module AutoClick::Mouse
   #
   # - x: X coordinate
   # - y: Y coordinate
-  def double_click_at(x : Int32, y : Int32) : Nil
+  def double_click_at(x : Int32, y : Int32, interval : Float64? = nil) : Nil
     User32.set_cursor_pos(x, y)
-    double_click
+    double_click(interval)
   end
 
   # Drag from one point to another with specified button

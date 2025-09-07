@@ -288,7 +288,7 @@ module AutoClick::Keyboard
       end
       text.each_char do |char|
         type_char(char, caps_on: false)
-        sleep(delay) if delay > 0
+        sleep(delay.seconds) if delay > 0
       end
       if caps_on
         key_stroke("capslock")
@@ -296,7 +296,7 @@ module AutoClick::Keyboard
     else
       text.each_char do |char|
         type_char(char, caps_on: caps_on)
-        sleep(delay) if delay > 0
+        sleep(delay.seconds) if delay > 0
       end
     end
   end
@@ -319,7 +319,7 @@ module AutoClick::Keyboard
   # - duration: Duration to hold the key in seconds
   def hold_key(key_name : String | Symbol | Int32, duration : Float64) : Nil
     key_down(key_name)
-    sleep(duration)
+    sleep(duration.seconds)
     key_up(key_name)
   end
 
@@ -331,7 +331,7 @@ module AutoClick::Keyboard
   def repeat_key(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = 0.1) : Nil
     count.times do
       key_stroke(key_name)
-      sleep(delay) if delay > 0
+      sleep(delay.seconds) if delay > 0
     end
   end
 end
