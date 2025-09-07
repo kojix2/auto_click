@@ -193,6 +193,20 @@ module AutoClick::VirtualKey
     "hyphen" => VK_OEM_MINUS, "period" => VK_OEM_PERIOD, "slash" => VK_OEM_2,
     "grave" => VK_OEM_3, "bracket" => VK_OEM_4, "backslash" => VK_OEM_5,
     "closebracket" => VK_OEM_6, "quote" => VK_OEM_7,
+
+  # --- Direct single-character symbol mappings (missing before) ---
+  # Allow direct use of punctuation like ";" or "/" in get_vk_code.
+  ";" => VK_OEM_1,
+  "=" => VK_OEM_PLUS,
+  "," => VK_OEM_COMMA,
+  "-" => VK_OEM_MINUS,
+  "." => VK_OEM_PERIOD,
+  "/" => VK_OEM_2,
+  "`" => VK_OEM_3,
+  "[" => VK_OEM_4,
+  "\\" => VK_OEM_5,
+  "]" => VK_OEM_6,
+  "'" => VK_OEM_7,
   }
 
   # Special character to key combination mapping
