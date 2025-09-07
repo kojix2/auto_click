@@ -3,6 +3,7 @@ require "./auto_click/input_structure"
 require "./auto_click/virtual_key"
 require "./auto_click/mouse"
 require "./auto_click/keyboard"
+require "./auto_click/version"
 
 # AutoClick - Windows GUI automation library for Crystal
 #
@@ -23,8 +24,6 @@ require "./auto_click/keyboard"
 # AutoClick.type("Hello World")
 #   ```
 module AutoClick
-  VERSION = "0.5.0"
-
   extend self
   include Mouse
   include Keyboard
