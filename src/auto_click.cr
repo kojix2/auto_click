@@ -16,12 +16,12 @@ require "./auto_click/version"
 # include AutoClick
 # left_click()
 # mouse_move(100, 100)
-# type("Hello World")
+# input_text("Hello World")
 #
 # # Method 2: Use as namespace
 # AutoClick.left_click
 # AutoClick.mouse_move(100, 100)
-# AutoClick.type("Hello World")
+# AutoClick.input_text("Hello World")
 #   ```
 module AutoClick
   extend self

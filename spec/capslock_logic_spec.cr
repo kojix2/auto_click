@@ -12,10 +12,10 @@ describe "CapsLock shift logic" do
   end
 
   it "no toggle by default" do
-    AutoClick::Keyboard.type("Ab")
+    AutoClick::Keyboard.input_text("Ab")
   end
 
   it "explicit toggle option works" do
-    AutoClick::Keyboard.type_with_delay("Cd", 0.0, toggle_capslock: true)
+    AutoClick::Keyboard.input_text_with_delay("Cd", 0.0, toggle_capslock: true)
   end
 end

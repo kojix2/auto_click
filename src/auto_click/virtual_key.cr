@@ -263,15 +263,15 @@ module AutoClick::VirtualKey
       # Check special characters
       if SPECIAL_CHAR_MAP.has_key?(char)
         base_key, _ = SPECIAL_CHAR_MAP[char]
-  return get_vk_code(base_key, raise_unknown: raise_unknown)
+        return get_vk_code(base_key, raise_unknown: raise_unknown)
       end
     end
 
     # Look up in key map (case insensitive)
-  vk = KEY_MAP[key.downcase]?
-  return vk unless vk.nil?
-  raise ArgumentError.new("Unknown key name: #{key}") if raise_unknown
-  0
+    vk = KEY_MAP[key.downcase]?
+    return vk unless vk.nil?
+    raise ArgumentError.new("Unknown key name: #{key}") if raise_unknown
+    0
   end
 
   # Check if a character requires Shift key
@@ -289,12 +289,12 @@ module AutoClick::VirtualKey
       {char.ord, false}
     elsif SPECIAL_CHAR_MAP.has_key?(char)
       base_key, needs_shift = SPECIAL_CHAR_MAP[char]
-  vk = get_vk_code(base_key, raise_unknown: raise_unknown)
+      vk = get_vk_code(base_key, raise_unknown: raise_unknown)
       {vk, needs_shift}
     else
       # Try to find direct mapping
-  vk = get_vk_code(char.to_s, raise_unknown: raise_unknown)
-  raise ArgumentError.new("Unknown character: #{char}") if vk == 0 && raise_unknown
+      vk = get_vk_code(char.to_s, raise_unknown: raise_unknown)
+      raise ArgumentError.new("Unknown character: #{char}") if vk == 0 && raise_unknown
       {vk, false}
     end
   end

@@ -64,23 +64,23 @@ module AutoClick::Keyboard
     (state & 0x0001) != 0 # Check if low bit is set (toggled)
   end
 
-  # Type a string of text
+  # Input a string of text (renamed from `type`)
   #
-  # - text: String to type
-  def type(text : String, *, toggle_capslock : Bool = false, raise_unknown : Bool = false) : Nil
+  # - text: String to send as key events
+  def input_text(text : String, *, toggle_capslock : Bool = false, raise_unknown : Bool = false) : Nil
     caps_on = key_toggled?("capslock")
     if toggle_capslock
       # Legacy behavior: temporarily disable Caps Lock for predictable shift usage
       if caps_on
         key_stroke("capslock")
       end
-  text.each_char { |char| type_char(char, caps_on: false, raise_unknown: raise_unknown) }
+      text.each_char { |char| type_char(char, caps_on: false, raise_unknown: raise_unknown) }
       if caps_on
         key_stroke("capslock")
       end
     else
       # New behavior: respect existing Caps Lock state without toggling
-  text.each_char { |char| type_char(char, caps_on: caps_on, raise_unknown: raise_unknown) }
+      text.each_char { |char| type_char(char, caps_on: caps_on, raise_unknown: raise_unknown) }
     end
   end
 
@@ -146,7 +146,7 @@ module AutoClick::Keyboard
     return if keys.empty?
 
     # Convert all keys to virtual key codes
-  vk_codes = keys.map { |key| VirtualKey.get_vk_code(key, raise_unknown: raise_unknown).to_u16 }.reject(&.zero?)
+    vk_codes = keys.map { |key| VirtualKey.get_vk_code(key, raise_unknown: raise_unknown).to_u16 }.reject(&.zero?)
     return if vk_codes.empty?
 
     inputs = [] of Bytes
@@ -265,14 +265,14 @@ module AutoClick::Keyboard
   #
   # - text: String to type
   # - delay: Delay between characters in seconds (default: 0.05)
-  def type_with_delay(text : String, delay : Float64 = 0.05, *, toggle_capslock : Bool = false, raise_unknown : Bool = false) : Nil
+  def input_text_with_delay(text : String, delay : Float64 = 0.05, *, toggle_capslock : Bool = false, raise_unknown : Bool = false) : Nil
     caps_on = key_toggled?("capslock")
     if toggle_capslock
       if caps_on
         key_stroke("capslock")
       end
       text.each_char do |char|
-  type_char(char, caps_on: false, raise_unknown: raise_unknown)
+        type_char(char, caps_on: false, raise_unknown: raise_unknown)
         sleep(delay.seconds) if delay > 0
       end
       if caps_on
@@ -280,7 +280,7 @@ module AutoClick::Keyboard
       end
     else
       text.each_char do |char|
-  type_char(char, caps_on: caps_on, raise_unknown: raise_unknown)
+        type_char(char, caps_on: caps_on, raise_unknown: raise_unknown)
         sleep(delay.seconds) if delay > 0
       end
     end

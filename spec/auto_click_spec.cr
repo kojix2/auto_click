@@ -14,7 +14,7 @@ describe AutoClick do
 
     it "includes Keyboard module" do
       AutoClick.responds_to?(:key_stroke).should be_true
-      AutoClick.responds_to?(:type).should be_true
+      AutoClick.responds_to?(:input_text).should be_true
       AutoClick.responds_to?(:key_combination).should be_true
     end
   end

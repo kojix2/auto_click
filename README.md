@@ -49,7 +49,7 @@ double_click()
 mouse_scroll(3)  # Scroll up 3 steps
 
 # Keyboard operations
-type("Hello World!")
+input_text("Hello World!")
 key_stroke("enter")
 key_combination("ctrl", "c")  # Copy
 copy()  # Shorthand for Ctrl+C
@@ -67,7 +67,7 @@ require "auto_click"
 
 AutoClick.left_click()
 AutoClick.mouse_move(100, 100)
-AutoClick.type("Hello World!")
+AutoClick.input_text("Hello World!")
 ```
 
 ## API Reference
@@ -121,8 +121,8 @@ AutoClick.type("Hello World!")
 
 #### Text Input
 
-- `type(text)` - Type string with automatic shift handling
-- `type_with_delay(text, delay)` - Type with delay between characters
+- `input_text(text, toggle_capslock: false, raise_unknown: false)` - Send text with automatic shift handling (optionally ignore or raise on unknown chars)
+- `input_text_with_delay(text, delay, toggle_capslock: false, raise_unknown: false)` - Same with per‑character delay
 
 #### Key Combinations
 
@@ -212,12 +212,17 @@ The library supports flexible key naming:
 The library automatically handles special characters that require Shift:
 
 ```crystal
-type("Hello World!")  # Automatically presses Shift for '!'
-type("user@example.com")  # Handles @ symbol
-type("Price: $19.99")  # Handles $ symbol
+input_text("Hello World!")  # Automatically presses Shift for '!'
+input_text("user@example.com")  # Handles @ symbol
+input_text("Price: $19.99")  # Handles $ symbol
 ```
 
 Supported special characters: `! @ # $ % ^ & * ( ) _ + { } | : " < > ? ~`
+
+Options:
+
+- `toggle_capslock: true` – temporarily turn off Caps Lock while sending (restored after)
+- `raise_unknown: true` – raise `ArgumentError` if a character/key can't be mapped (default silently skips)
 
 ## Platform Support
 

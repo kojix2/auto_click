@@ -30,12 +30,12 @@ describe AutoClick::Keyboard do
   end
 
   describe "text input methods" do
-    it "has type method" do
-      AutoClick::Keyboard.responds_to?(:type).should be_true
+    it "has input_text method" do
+      AutoClick::Keyboard.responds_to?(:input_text).should be_true
     end
 
-    it "has type_with_delay method" do
-      AutoClick::Keyboard.responds_to?(:type_with_delay).should be_true
+    it "has input_text_with_delay method" do
+      AutoClick::Keyboard.responds_to?(:input_text_with_delay).should be_true
     end
   end
 

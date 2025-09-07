@@ -27,7 +27,7 @@ sleep(1.seconds)
 
 # Type some text
 puts "Typing text..."
-type("Hello from Crystal AutoClick!")
+input_text("Hello from Crystal AutoClick!")
 sleep(1.seconds)
 
 # Press Enter
