@@ -154,7 +154,10 @@ module AutoClick::InputStructure
   end
 
   def wheel_input(delta : Int32) : Bytes
-    mouse_input(0, 0, delta.to_u32!, MOUSEEVENTF_WHEEL)
+  # Windows expects a DWORD whose signed value represents the wheel delta (can be negative).
+  # Crystal's to_u32! raises on negative numbers, so reinterpret the 32-bit pattern manually.
+  raw = (delta.to_i64 & 0xFFFF_FFFF).to_u32
+  mouse_input(0, 0, raw, MOUSEEVENTF_WHEEL)
   end
 
   # Convenience methods for common keyboard events
