@@ -153,7 +153,7 @@ double_click()
 mouse_scroll(<span class="n">3</span>)  <span class="c"># Scroll up 3 steps</span>
 
 <span class="c"># Keyboard operations</span>
-<span class="k">type</span>(<span class="s">&quot;Hello World!&quot;</span>)
+input_text(<span class="s">&quot;Hello World!&quot;</span>)
 key_stroke(<span class="s">&quot;enter&quot;</span>)
 key_combination(<span class="s">&quot;ctrl&quot;</span>, <span class="s">&quot;c&quot;</span>)  <span class="c"># Copy</span>
 copy()  <span class="c"># Shorthand for Ctrl+C</span>
@@ -171,7 +171,7 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
 
 <span class="t">AutoClick</span>.left_click()
 <span class="t">AutoClick</span>.mouse_move(<span class="n">100</span>, <span class="n">100</span>)
-<span class="t">AutoClick</span>.<span class="k">type</span>(<span class="s">&quot;Hello World!&quot;</span>)</code></pre>
+<span class="t">AutoClick</span>.input_text(<span class="s">&quot;Hello World!&quot;</span>)</code></pre>
 <h2><a id="api-reference" class="anchor" href="#api-reference">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>
@@ -264,8 +264,8 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
   </svg>
 </a>Text Input</h4>
 <ul>
-<li><code>type(text)</code> - Type string with automatic shift handling</li>
-<li><code>type_with_delay(text, delay)</code> - Type with delay between characters</li>
+<li><code>input_text(text, toggle_capslock: false, raise_unknown: false)</code> - Send text with automatic shift handling (optionally ignore or raise on unknown chars)</li>
+<li><code>input_text_with_delay(text, delay, toggle_capslock: false, raise_unknown: false)</code> - Same with per‑character delay</li>
 </ul>
 <h4><a id="key-combinations" class="anchor" href="#key-combinations">
   <svg class="octicon-link" aria-hidden="true">
@@ -378,10 +378,15 @@ x, y <span class="o">=</span> cursor_position()</code></pre>
   </svg>
 </a>Special Characters</h2>
 <p>The library automatically handles special characters that require Shift:</p>
-<pre><code class="language-crystal"><span class="k">type</span>(<span class="s">&quot;Hello World!&quot;</span>)  <span class="c"># Automatically presses Shift for &#39;!&#39;</span>
-<span class="k">type</span>(<span class="s">&quot;user@example.com&quot;</span>)  <span class="c"># Handles @ symbol</span>
-<span class="k">type</span>(<span class="s">&quot;Price: $19.99&quot;</span>)  <span class="c"># Handles $ symbol</span></code></pre>
+<pre><code class="language-crystal">input_text(<span class="s">&quot;Hello World!&quot;</span>)  <span class="c"># Automatically presses Shift for &#39;!&#39;</span>
+input_text(<span class="s">&quot;user@example.com&quot;</span>)  <span class="c"># Handles @ symbol</span>
+input_text(<span class="s">&quot;Price: $19.99&quot;</span>)  <span class="c"># Handles $ symbol</span></code></pre>
 <p>Supported special characters: <code>! @ # $ % ^ &amp; * ( ) _ + { } | : &quot; &lt; &gt; ? ~</code></p>
+<p>Options:</p>
+<ul>
+<li><code>toggle_capslock: true</code> – temporarily turn off Caps Lock while sending (restored after)</li>
+<li><code>raise_unknown: true</code> – raise <code>ArgumentError</code> if a character/key can't be mapped (default silently skips)</li>
+</ul>
 <h2><a id="platform-support" class="anchor" href="#platform-support">
   <svg class="octicon-link" aria-hidden="true">
     <use href="#octicon-link"/>

@@ -163,7 +163,7 @@ supporting multiple naming conventions for flexibility.</p>
   </h2>
   
     
-      <a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L5" target="_blank">
+      <a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/virtual_key.cr#L5" target="_blank">
         auto_click/virtual_key.cr
       </a>
     
@@ -910,28 +910,28 @@ supporting multiple naming conventions for flexibility.</p>
   <ul class="list-summary">
     
       <li class="entry-summary">
-        <a href="#get_key_combination%28char%3AChar%29%3ATuple%28Int32%2CBool%29-instance-method" class="signature"><strong>#get_key_combination</strong>(char : Char) : Tuple(Int32, Bool)</a>
+        <a href="#get_key_combination%28char%3AChar%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ATuple%28Int32%2CBool%29-instance-method" class="signature"><strong>#get_key_combination</strong>(char : Char, *, raise_unknown : Bool = <span class="n">false</span>) : Tuple(Int32, Bool)</a>
         
           <div class="summary"><p>Get key combination for a character</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_vk_code%28key%3AInt32%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : Int32) : Int32</a>
+        <a href="#get_vk_code%28key%3AInt32%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : Int32, *, raise_unknown : Bool = <span class="n">false</span>) : Int32</a>
         
           <div class="summary"><p>Convert key name to virtual key code (Int32 overload)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_vk_code%28key%3ASymbol%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : Symbol) : Int32</a>
+        <a href="#get_vk_code%28key%3ASymbol%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : Symbol, *, raise_unknown : Bool = <span class="n">false</span>) : Int32</a>
         
           <div class="summary"><p>Convert key name to virtual key code (Symbol overload)</p></div>
         
       </li>
     
       <li class="entry-summary">
-        <a href="#get_vk_code%28key%3AString%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : String) : Int32</a>
+        <a href="#get_vk_code%28key%3AString%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3AInt32-instance-method" class="signature"><strong>#get_vk_code</strong>(key : String, *, raise_unknown : Bool = <span class="n">false</span>) : Int32</a>
         
           <div class="summary"><p>Convert key name to virtual key code (String overload)</p></div>
         
@@ -941,20 +941,6 @@ supporting multiple naming conventions for flexibility.</p>
         <a href="#requires_shift%3F%28char%3AChar%29%3ABool-instance-method" class="signature"><strong>#requires_shift?</strong>(char : Char) : Bool</a>
         
           <div class="summary"><p>Check if a character requires Shift key</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#strict_unknown_keys%3D%28value%3ABool%29-instance-method" class="signature"><strong>#strict_unknown_keys=</strong>(value : Bool)</a>
-        
-          <div class="summary"><p>Enable or disable strict mode for unknown key names.</p></div>
-        
-      </li>
-    
-      <li class="entry-summary">
-        <a href="#strict_unknown_keys%3F%3ABool-instance-method" class="signature"><strong>#strict_unknown_keys?</strong> : Bool</a>
-        
-          <div class="summary"><p>Query current strict mode setting.</p></div>
         
       </li>
     
@@ -982,12 +968,12 @@ supporting multiple naming conventions for flexibility.</p>
     Instance Method Detail
   </h2>
   
-    <div class="entry-detail" id="get_key_combination(char:Char):Tuple(Int32,Bool)-instance-method">
+    <div class="entry-detail" id="get_key_combination(char:Char,*,raise_unknown:Bool=false):Tuple(Int32,Bool)-instance-method">
       <div class="signature">
         
-        def <strong>get_key_combination</strong>(char : Char) : Tuple(Int32, Bool)
+        def <strong>get_key_combination</strong>(char : Char, *, raise_unknown : Bool = <span class="n">false</span>) : Tuple(Int32, Bool)
 
-        <a class="method-permalink" href="#get_key_combination%28char%3AChar%29%3ATuple%28Int32%2CBool%29-instance-method">#</a>
+        <a class="method-permalink" href="#get_key_combination%28char%3AChar%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ATuple%28Int32%2CBool%29-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -998,17 +984,17 @@ supporting multiple naming conventions for flexibility.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L303" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/virtual_key.cr#L283" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_vk_code(key:Int32):Int32-instance-method">
+    <div class="entry-detail" id="get_vk_code(key:Int32,*,raise_unknown:Bool=false):Int32-instance-method">
       <div class="signature">
         
-        def <strong>get_vk_code</strong>(key : Int32) : Int32
+        def <strong>get_vk_code</strong>(key : Int32, *, raise_unknown : Bool = <span class="n">false</span>) : Int32
 
-        <a class="method-permalink" href="#get_vk_code%28key%3AInt32%29%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#get_vk_code%28key%3AInt32%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1019,17 +1005,17 @@ supporting multiple naming conventions for flexibility.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L252" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/virtual_key.cr#L238" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_vk_code(key:Symbol):Int32-instance-method">
+    <div class="entry-detail" id="get_vk_code(key:Symbol,*,raise_unknown:Bool=false):Int32-instance-method">
       <div class="signature">
         
-        def <strong>get_vk_code</strong>(key : Symbol) : Int32
+        def <strong>get_vk_code</strong>(key : Symbol, *, raise_unknown : Bool = <span class="n">false</span>) : Int32
 
-        <a class="method-permalink" href="#get_vk_code%28key%3ASymbol%29%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#get_vk_code%28key%3ASymbol%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1040,17 +1026,17 @@ supporting multiple naming conventions for flexibility.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L257" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/virtual_key.cr#L243" target="_blank">View source</a>]
         
       </div>
     </div>
   
-    <div class="entry-detail" id="get_vk_code(key:String):Int32-instance-method">
+    <div class="entry-detail" id="get_vk_code(key:String,*,raise_unknown:Bool=false):Int32-instance-method">
       <div class="signature">
         
-        def <strong>get_vk_code</strong>(key : String) : Int32
+        def <strong>get_vk_code</strong>(key : String, *, raise_unknown : Bool = <span class="n">false</span>) : Int32
 
-        <a class="method-permalink" href="#get_vk_code%28key%3AString%29%3AInt32-instance-method">#</a>
+        <a class="method-permalink" href="#get_vk_code%28key%3AString%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3AInt32-instance-method">#</a>
       </div>
       
         <div class="doc">
@@ -1061,7 +1047,7 @@ supporting multiple naming conventions for flexibility.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L262" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/virtual_key.cr#L248" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -1082,50 +1068,7 @@ supporting multiple naming conventions for flexibility.</p>
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L298" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="strict_unknown_keys=(value:Bool)-instance-method">
-      <div class="signature">
-        
-        def <strong>strict_unknown_keys=</strong>(value : Bool)
-
-        <a class="method-permalink" href="#strict_unknown_keys%3D%28value%3ABool%29-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Enable or disable strict mode for unknown key names.
-In strict mode, an ArgumentError is raised if a key cannot be mapped.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L13" target="_blank">View source</a>]
-        
-      </div>
-    </div>
-  
-    <div class="entry-detail" id="strict_unknown_keys?:Bool-instance-method">
-      <div class="signature">
-        
-        def <strong>strict_unknown_keys?</strong> : Bool
-
-        <a class="method-permalink" href="#strict_unknown_keys%3F%3ABool-instance-method">#</a>
-      </div>
-      
-        <div class="doc">
-          
-          <p>Query current strict mode setting.</p>
-        </div>
-      
-      <br/>
-      <div>
-        
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/virtual_key.cr#L18" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/virtual_key.cr#L278" target="_blank">View source</a>]
         
       </div>
     </div>

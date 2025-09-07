@@ -128,12 +128,12 @@ by interfacing with Windows User32 API functions.</p>
 <span class="k">include</span> <span class="t">AutoClick</span>
 left_click()
 mouse_move(<span class="n">100</span>, <span class="n">100</span>)
-<span class="k">type</span>(<span class="s">&quot;Hello World&quot;</span>)
+input_text(<span class="s">&quot;Hello World&quot;</span>)
 
 <span class="c"># Method 2: Use as namespace</span>
 <span class="t">AutoClick</span>.left_click
 <span class="t">AutoClick</span>.mouse_move(<span class="n">100</span>, <span class="n">100</span>)
-<span class="t">AutoClick</span>.<span class="k">type</span>(<span class="s">&quot;Hello World&quot;</span>)</code></pre>
+<span class="t">AutoClick</span>.input_text(<span class="s">&quot;Hello World&quot;</span>)</code></pre>
 
 
 
@@ -190,21 +190,21 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
   </h2>
   
     
-      <a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click.cr#L26" target="_blank">
+      <a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click.cr#L26" target="_blank">
         auto_click.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/user32.cr#L5" target="_blank">
+      <a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/user32.cr#L5" target="_blank">
         auto_click/user32.cr
       </a>
     
     <br/>
   
     
-      <a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click/version.cr#L1" target="_blank">
+      <a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click/version.cr#L1" target="_blank">
         auto_click/version.cr
       </a>
     
@@ -305,16 +305,6 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
     alt_tab</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#auto_toggle_capslock%3D%28value%3ABool%29-instance-method" class="tooltip">
-      <span>auto_toggle_capslock=(value : Bool)</span>
-    auto_toggle_capslock=</a>, 
-    
-  
-    <a href="AutoClick/Keyboard.html#auto_toggle_capslock%3F%3ABool-instance-method" class="tooltip">
-      <span>auto_toggle_capslock? : Bool</span>
-    auto_toggle_capslock?</a>, 
-    
-  
     <a href="AutoClick/Keyboard.html#copy%3ANil-instance-method" class="tooltip">
       <span>copy : Nil</span>
     copy</a>, 
@@ -335,18 +325,28 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
     get_key_state</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#hold_key%28key_name%3AString%7CSymbol%7CInt32%2Cduration%3AFloat64%29%3ANil-instance-method" class="tooltip">
-      <span>hold_key(key_name : String | Symbol | Int32, duration : Float64) : Nil</span>
+    <a href="AutoClick/Keyboard.html#hold_key%28key_name%3AString%7CSymbol%7CInt32%2Cduration%3AFloat64%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>hold_key(key_name : String | Symbol | Int32, duration : Float64, *, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
     hold_key</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#key_combination%28keys%3AArray%28String%7CSymbol%7CInt32%29%29%3ANil-instance-method" class="tooltip">
-      <span>key_combination(keys : Array(String | Symbol | Int32)) : Nil<br/>key_combination(*keys : String | Symbol | Int32) : Nil</span>
+    <a href="AutoClick/Keyboard.html#input_text%28text%3AString%2C%2A%2Ctoggle_capslock%3ABool%3Dfalse%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>input_text(text : String, *, toggle_capslock : Bool = <span class="n">false</span>, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
+    input_text</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#input_text_with_delay%28text%3AString%2Cdelay%3AFloat64%3D0.05%2C%2A%2Ctoggle_capslock%3ABool%3Dfalse%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>input_text_with_delay(text : String, delay : Float64 = <span class="n">0.05</span>, *, toggle_capslock : Bool = <span class="n">false</span>, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
+    input_text_with_delay</a>, 
+    
+  
+    <a href="AutoClick/Keyboard.html#key_combination%28keys%3AArray%28String%7CSymbol%7CInt32%29%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>key_combination(keys : Array(String | Symbol | Int32), *, raise_unknown : Bool = <span class="n">false</span>) : Nil<br/>key_combination(*keys : String | Symbol | Int32, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
     key_combination</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#key_down%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="tooltip">
-      <span>key_down(key_name : String | Symbol | Int32) : Nil</span>
+    <a href="AutoClick/Keyboard.html#key_down%28key_name%3AString%7CSymbol%7CInt32%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>key_down(key_name : String | Symbol | Int32, *, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
     key_down</a>, 
     
   
@@ -355,8 +355,8 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
     key_pressed?</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#key_stroke%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="tooltip">
-      <span>key_stroke(key_name : String | Symbol | Int32) : Nil</span>
+    <a href="AutoClick/Keyboard.html#key_stroke%28key_name%3AString%7CSymbol%7CInt32%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>key_stroke(key_name : String | Symbol | Int32, *, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
     key_stroke</a>, 
     
   
@@ -365,8 +365,8 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
     key_toggled?</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#key_up%28key_name%3AString%7CSymbol%7CInt32%29%3ANil-instance-method" class="tooltip">
-      <span>key_up(key_name : String | Symbol | Int32) : Nil</span>
+    <a href="AutoClick/Keyboard.html#key_up%28key_name%3AString%7CSymbol%7CInt32%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>key_up(key_name : String | Symbol | Int32, *, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
     key_up</a>, 
     
   
@@ -400,8 +400,8 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
     redo</a>, 
     
   
-    <a href="AutoClick/Keyboard.html#repeat_key%28key_name%3AString%7CSymbol%7CInt32%2Ccount%3AInt32%2Cdelay%3AFloat64%3D0.1%29%3ANil-instance-method" class="tooltip">
-      <span>repeat_key(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = <span class="n">0.1</span>) : Nil</span>
+    <a href="AutoClick/Keyboard.html#repeat_key%28key_name%3AString%7CSymbol%7CInt32%2Ccount%3AInt32%2Cdelay%3AFloat64%3D0.1%2C%2A%2Craise_unknown%3ABool%3Dfalse%29%3ANil-instance-method" class="tooltip">
+      <span>repeat_key(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = <span class="n">0.1</span>, *, raise_unknown : Bool = <span class="n">false</span>) : Nil</span>
     repeat_key</a>, 
     
   
@@ -433,16 +433,6 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
     <a href="AutoClick/Keyboard.html#task_manager%3ANil-instance-method" class="tooltip">
       <span>task_manager : Nil</span>
     task_manager</a>, 
-    
-  
-    <a href="AutoClick/Keyboard.html#type%28text%3AString%29%3ANil-instance-method" class="tooltip">
-      <span>type(text : String) : Nil</span>
-    type</a>, 
-    
-  
-    <a href="AutoClick/Keyboard.html#type_with_delay%28text%3AString%2Cdelay%3AFloat64%3D0.05%29%3ANil-instance-method" class="tooltip">
-      <span>type_with_delay(text : String, delay : Float64 = <span class="n">0.05</span>) : Nil</span>
-    type_with_delay</a>, 
     
   
     <a href="AutoClick/Keyboard.html#undo%3ANil-instance-method" class="tooltip">
@@ -599,7 +589,7 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click.cr#L43" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click.cr#L43" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -624,7 +614,7 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click.cr#L54" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click.cr#L54" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -649,7 +639,7 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click.cr#L62" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click.cr#L62" target="_blank">View source</a>]
         
       </div>
     </div>
@@ -671,7 +661,7 @@ mouse_move(<span class="n">100</span>, <span class="n">100</span>)
       <br/>
       <div>
         
-          [<a href="https://github.com/kojix2/auto_click/blob/590e42f4432c6736e52012f5ebd3bdd337cbaa3f/src/auto_click.cr#L34" target="_blank">View source</a>]
+          [<a href="https://github.com/kojix2/auto_click/blob/d41366b3836b52528e2b48a5383252b6a464ad6a/src/auto_click.cr#L34" target="_blank">View source</a>]
         
       </div>
     </div>
