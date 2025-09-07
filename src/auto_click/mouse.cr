@@ -124,7 +124,10 @@ module AutoClick::Mouse
 
   # Scroll the mouse wheel
   #
-  # - steps: Number of scroll steps (positive = up/forward, negative = down/backward)
+  # - steps: Logical scroll steps.
+  #          Positive => scroll up (wheel forward, Windows WHEEL_DELTA +120 per step)
+  #          Negative => scroll down (wheel backward, Windows WHEEL_DELTA -120 per step)
+  # NOTE: A single Windows wheel detent is 120 units (WHEEL_DELTA). We multiply steps by 120.
   def mouse_scroll(steps : Int32) : Nil
     # Each step is 120 units in Windows
     delta = steps * 120
