@@ -5,6 +5,20 @@
 module AutoClick::VirtualKey
   extend self
 
+  # When true, unknown key names will raise an ArgumentError instead of returning 0.
+  @@strict_unknown_keys = false
+
+  # Enable or disable strict mode for unknown key names.
+  # In strict mode, an ArgumentError is raised if a key cannot be mapped.
+  def strict_unknown_keys=(value : Bool)
+    @@strict_unknown_keys = value
+  end
+
+  # Query current strict mode setting.
+  def strict_unknown_keys? : Bool
+    @@strict_unknown_keys
+  end
+
   # Virtual Key Code constants
   VK_LBUTTON  = 0x01
   VK_RBUTTON  = 0x02
@@ -268,7 +282,16 @@ module AutoClick::VirtualKey
     end
 
     # Look up in key map (case insensitive)
-    KEY_MAP[key.downcase]? || 0
+    vk = KEY_MAP[key.downcase]?
+    if vk.nil?
+      if @@strict_unknown_keys
+        raise ArgumentError.new("Unknown key name: #{key}")
+      else
+        0
+      end
+    else
+      vk
+    end
   end
 
   # Check if a character requires Shift key
