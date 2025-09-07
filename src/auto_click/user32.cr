@@ -43,9 +43,19 @@ module AutoClick::User32
 
   # Send input events to the system
   #
-  # - inputs: Array of input structures
-  # - input_size: Size of each input structure in bytes
-  # Returns: Number of events successfully sent
+  # New canonical order matching WinAPI:
+  #   UINT SendInput(UINT cInputs, LPINPUT pInputs, int cbSize);
+  # - count: Number of INPUT structures
+  # - inputs: Concatenated INPUT structure bytes
+  # - input_size: Size of a single INPUT structure
+  # Returns: Number of events successfully inserted into the input stream
+  def send_input(count : UInt32, inputs : Bytes, input_size : Int32) : UInt32
+    LibUser32.SendInput(count, inputs, input_size)
+  end
+
+  # Deprecated legacy parameter order kept for backward compatibility.
+  # Will be removed in a future minor release.
+  @[Deprecated("Use send_input(count, inputs, input_size) matching WinAPI order")]
   def send_input(inputs : Bytes, count : UInt32, input_size : Int32) : UInt32
     LibUser32.SendInput(count, inputs, input_size)
   end

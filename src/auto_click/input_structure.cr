@@ -106,7 +106,7 @@ module AutoClick::InputStructure
   #
   # - input: Input structure bytes
   def send_single_input(input : Bytes) : UInt32
-    User32.send_input(input, 1_u32, input.size)
+    User32.send_input(1_u32, input, input.size)
   end
 
   # Send multiple input events
@@ -125,7 +125,7 @@ module AutoClick::InputStructure
       offset += input.size
     end
 
-    User32.send_input(combined, inputs.size.to_u32, inputs[0].size)
+    User32.send_input(inputs.size.to_u32, combined, inputs[0].size)
   end
 
   # Convenience methods for common mouse events
