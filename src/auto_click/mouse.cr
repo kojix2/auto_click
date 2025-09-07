@@ -211,6 +211,7 @@ module AutoClick::Mouse
   # - steps: Number of intermediate steps (default: 10)
   # - delay: Delay between steps in seconds (default: 0.01)
   def smooth_move(x : Int32, y : Int32, steps : Int32 = 10, delay : Float64 = 0.01) : Nil
+    raise ArgumentError.new("steps must be > 0 (given #{steps})") if steps <= 0
     # Get current cursor position
     point = Bytes.new(8)
     User32.get_cursor_pos(point)
