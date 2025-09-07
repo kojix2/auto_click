@@ -11,16 +11,11 @@ describe "CapsLock shift logic" do
     AutoClick::Keyboard.__debug_letter_shift_needed('a', true).should be_true
   end
 
-  it "respects configuration (no toggle by default)" do
-    AutoClick::VirtualKey.strict_unknown_keys = false
-    AutoClick::Keyboard.auto_toggle_capslock = false
-    # Just ensure methods callable without error
+  it "no toggle by default" do
     AutoClick::Keyboard.type("Ab")
   end
 
-  it "legacy toggle mode still callable" do
-    AutoClick::Keyboard.auto_toggle_capslock = true
-    AutoClick::Keyboard.type_with_delay("Cd", 0.0)
-    AutoClick::Keyboard.auto_toggle_capslock = false
+  it "explicit toggle option works" do
+    AutoClick::Keyboard.type_with_delay("Cd", 0.0, toggle_capslock: true)
   end
 end

@@ -5,33 +5,19 @@
 module AutoClick::Keyboard
   extend self
 
-  # When true, the old behavior of temporarily disabling Caps Lock is used.
-  # When false (default), we preserve current Caps Lock state and adjust Shift logic.
-  @@auto_toggle_capslock = false
-
-  # Enable/disable legacy auto toggle behavior.
-  def auto_toggle_capslock=(value : Bool)
-    @@auto_toggle_capslock = value
-  end
-
-  # Query current auto toggle setting.
-  def auto_toggle_capslock? : Bool
-    @@auto_toggle_capslock
-  end
-
   # Press and release a key (key stroke)
   #
   # - key_name: Key name (String, Symbol, or Integer virtual key code)
-  def key_stroke(key_name : String | Symbol | Int32) : Nil
-    key_down(key_name)
-    key_up(key_name)
+  def key_stroke(key_name : String | Symbol | Int32, *, raise_unknown : Bool = false) : Nil
+    key_down(key_name, raise_unknown: raise_unknown)
+    key_up(key_name, raise_unknown: raise_unknown)
   end
 
   # Press and hold a key
   #
   # - key_name: Key name (String, Symbol, or Integer virtual key code)
-  def key_down(key_name : String | Symbol | Int32) : Nil
-    vk_code = VirtualKey.get_vk_code(key_name)
+  def key_down(key_name : String | Symbol | Int32, *, raise_unknown : Bool = false) : Nil
+    vk_code = VirtualKey.get_vk_code(key_name, raise_unknown: raise_unknown)
     return if vk_code == 0
 
     input = InputStructure.key_down_input(vk_code.to_u16)
@@ -41,8 +27,8 @@ module AutoClick::Keyboard
   # Release a key
   #
   # - key_name: Key name (String, Symbol, or Integer virtual key code)
-  def key_up(key_name : String | Symbol | Int32) : Nil
-    vk_code = VirtualKey.get_vk_code(key_name)
+  def key_up(key_name : String | Symbol | Int32, *, raise_unknown : Bool = false) : Nil
+    vk_code = VirtualKey.get_vk_code(key_name, raise_unknown: raise_unknown)
     return if vk_code == 0
 
     input = InputStructure.key_up_input(vk_code.to_u16)
@@ -81,29 +67,28 @@ module AutoClick::Keyboard
   # Type a string of text
   #
   # - text: String to type
-  def type(text : String) : Nil
+  def type(text : String, *, toggle_capslock : Bool = false, raise_unknown : Bool = false) : Nil
     caps_on = key_toggled?("capslock")
-    if @@auto_toggle_capslock
+    if toggle_capslock
       # Legacy behavior: temporarily disable Caps Lock for predictable shift usage
       if caps_on
         key_stroke("capslock")
       end
-      text.each_char { |char| type_char(char, caps_on: false) }
+  text.each_char { |char| type_char(char, caps_on: false, raise_unknown: raise_unknown) }
       if caps_on
         key_stroke("capslock")
       end
     else
       # New behavior: respect existing Caps Lock state without toggling
-      text.each_char { |char| type_char(char, caps_on: caps_on) }
+  text.each_char { |char| type_char(char, caps_on: caps_on, raise_unknown: raise_unknown) }
     end
   end
 
   # Type a single character
   #
   # - char: Character to type
-  private def type_char(char : Char, *, caps_on : Bool) : Nil
-    # Derive vk_code and whether Shift is required taking Caps Lock into account.
-    vk_code, needs_shift = VirtualKey.get_key_combination(char)
+  private def type_char(char : Char, *, caps_on : Bool, raise_unknown : Bool = false) : Nil
+    vk_code, needs_shift = VirtualKey.get_key_combination(char, raise_unknown: raise_unknown)
 
     # Adjust letter handling when we are respecting caps state (i.e., not legacy toggle path)
     if caps_on
@@ -150,18 +135,18 @@ module AutoClick::Keyboard
   # Send key combination (e.g., Ctrl+C, Alt+Tab)
   #
   # - keys: Array of key names to press simultaneously
-  def key_combination(*keys : String | Symbol | Int32) : Nil
-    key_combination(keys.to_a)
+  def key_combination(*keys : String | Symbol | Int32, raise_unknown : Bool = false) : Nil
+    key_combination(keys.to_a, raise_unknown: raise_unknown)
   end
 
   # Send key combination from array
   #
   # - keys: Array of key names to press simultaneously
-  def key_combination(keys : Array(String | Symbol | Int32)) : Nil
+  def key_combination(keys : Array(String | Symbol | Int32), *, raise_unknown : Bool = false) : Nil
     return if keys.empty?
 
     # Convert all keys to virtual key codes
-    vk_codes = keys.map { |key| VirtualKey.get_vk_code(key).to_u16 }.reject(&.zero?)
+  vk_codes = keys.map { |key| VirtualKey.get_vk_code(key, raise_unknown: raise_unknown).to_u16 }.reject(&.zero?)
     return if vk_codes.empty?
 
     inputs = [] of Bytes
@@ -280,14 +265,14 @@ module AutoClick::Keyboard
   #
   # - text: String to type
   # - delay: Delay between characters in seconds (default: 0.05)
-  def type_with_delay(text : String, delay : Float64 = 0.05) : Nil
+  def type_with_delay(text : String, delay : Float64 = 0.05, *, toggle_capslock : Bool = false, raise_unknown : Bool = false) : Nil
     caps_on = key_toggled?("capslock")
-    if @@auto_toggle_capslock
+    if toggle_capslock
       if caps_on
         key_stroke("capslock")
       end
       text.each_char do |char|
-        type_char(char, caps_on: false)
+  type_char(char, caps_on: false, raise_unknown: raise_unknown)
         sleep(delay.seconds) if delay > 0
       end
       if caps_on
@@ -295,7 +280,7 @@ module AutoClick::Keyboard
       end
     else
       text.each_char do |char|
-        type_char(char, caps_on: caps_on)
+  type_char(char, caps_on: caps_on, raise_unknown: raise_unknown)
         sleep(delay.seconds) if delay > 0
       end
     end
@@ -317,10 +302,10 @@ module AutoClick::Keyboard
   #
   # - key_name: Key name to hold
   # - duration: Duration to hold the key in seconds
-  def hold_key(key_name : String | Symbol | Int32, duration : Float64) : Nil
-    key_down(key_name)
+  def hold_key(key_name : String | Symbol | Int32, duration : Float64, *, raise_unknown : Bool = false) : Nil
+    key_down(key_name, raise_unknown: raise_unknown)
     sleep(duration.seconds)
-    key_up(key_name)
+    key_up(key_name, raise_unknown: raise_unknown)
   end
 
   # Press a key multiple times
@@ -328,9 +313,9 @@ module AutoClick::Keyboard
   # - key_name: Key name to press
   # - count: Number of times to press the key
   # - delay: Delay between presses in seconds (default: 0.1)
-  def repeat_key(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = 0.1) : Nil
+  def repeat_key(key_name : String | Symbol | Int32, count : Int32, delay : Float64 = 0.1, *, raise_unknown : Bool = false) : Nil
     count.times do
-      key_stroke(key_name)
+      key_stroke(key_name, raise_unknown: raise_unknown)
       sleep(delay.seconds) if delay > 0
     end
   end

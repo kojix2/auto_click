@@ -5,20 +5,6 @@
 module AutoClick::VirtualKey
   extend self
 
-  # When true, unknown key names will raise an ArgumentError instead of returning 0.
-  @@strict_unknown_keys = false
-
-  # Enable or disable strict mode for unknown key names.
-  # In strict mode, an ArgumentError is raised if a key cannot be mapped.
-  def strict_unknown_keys=(value : Bool)
-    @@strict_unknown_keys = value
-  end
-
-  # Query current strict mode setting.
-  def strict_unknown_keys? : Bool
-    @@strict_unknown_keys
-  end
-
   # Virtual Key Code constants
   VK_LBUTTON  = 0x01
   VK_RBUTTON  = 0x02
@@ -249,17 +235,17 @@ module AutoClick::VirtualKey
   }
 
   # Convert key name to virtual key code (Int32 overload)
-  def get_vk_code(key : Int32) : Int32
+  def get_vk_code(key : Int32, *, raise_unknown : Bool = false) : Int32
     key
   end
 
   # Convert key name to virtual key code (Symbol overload)
-  def get_vk_code(key : Symbol) : Int32
-    get_vk_code(key.to_s)
+  def get_vk_code(key : Symbol, *, raise_unknown : Bool = false) : Int32
+    get_vk_code(key.to_s, raise_unknown: raise_unknown)
   end
 
   # Convert key name to virtual key code (String overload)
-  def get_vk_code(key : String) : Int32
+  def get_vk_code(key : String, *, raise_unknown : Bool = false) : Int32
     # Handle single characters
     if key.size == 1
       char = key[0]
@@ -277,21 +263,15 @@ module AutoClick::VirtualKey
       # Check special characters
       if SPECIAL_CHAR_MAP.has_key?(char)
         base_key, _ = SPECIAL_CHAR_MAP[char]
-        return get_vk_code(base_key)
+  return get_vk_code(base_key, raise_unknown: raise_unknown)
       end
     end
 
     # Look up in key map (case insensitive)
-    vk = KEY_MAP[key.downcase]?
-    if vk.nil?
-      if @@strict_unknown_keys
-        raise ArgumentError.new("Unknown key name: #{key}")
-      else
-        0
-      end
-    else
-      vk
-    end
+  vk = KEY_MAP[key.downcase]?
+  return vk unless vk.nil?
+  raise ArgumentError.new("Unknown key name: #{key}") if raise_unknown
+  0
   end
 
   # Check if a character requires Shift key
@@ -300,7 +280,7 @@ module AutoClick::VirtualKey
   end
 
   # Get key combination for a character
-  def get_key_combination(char : Char) : {Int32, Bool}
+  def get_key_combination(char : Char, *, raise_unknown : Bool = false) : {Int32, Bool}
     if char.ascii_letter?
       vk = char.upcase.ord
       needs_shift = char.ascii_uppercase?
@@ -309,11 +289,12 @@ module AutoClick::VirtualKey
       {char.ord, false}
     elsif SPECIAL_CHAR_MAP.has_key?(char)
       base_key, needs_shift = SPECIAL_CHAR_MAP[char]
-      vk = get_vk_code(base_key)
+  vk = get_vk_code(base_key, raise_unknown: raise_unknown)
       {vk, needs_shift}
     else
       # Try to find direct mapping
-      vk = get_vk_code(char.to_s)
+  vk = get_vk_code(char.to_s, raise_unknown: raise_unknown)
+  raise ArgumentError.new("Unknown character: #{char}") if vk == 0 && raise_unknown
       {vk, false}
     end
   end
